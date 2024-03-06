@@ -4,75 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="ror init project">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/.ruby-version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/Gemfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/Gemfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/Rakefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/assets/config/manifest.js" afterDir="false" />
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="delete master.key">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/images/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/assets/stylesheets/application.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/channels/application_cable/channel.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/channels/application_cable/connection.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/controllers/application_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/controllers/alive_controller.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/app/controllers/concerns/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/helpers/application_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/javascript/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/javascript/controllers/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/javascript/controllers/hello_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/javascript/controllers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/jobs/application_job.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/mailers/application_mailer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/models/application_record.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/app/models/concerns/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/layouts/mailer.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/layouts/mailer.text.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/bin/bundle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/bin/docker-entrypoint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/bin/importmap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/bin/rails" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/bin/rake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/bin/setup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config.ru" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/application.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/boot.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/cable.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/credentials.yml.enc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/database.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/environment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/environments/development.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/environments/production.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/environments/test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/importmap.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/initializers/assets.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/initializers/content_security_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/initializers/filter_parameter_logging.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/initializers/inflections.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/initializers/permissions_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/locales/en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/master.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/puma.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/config/storage.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/db/seeds.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/lib/assets/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/lib/tasks/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/422.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/apple-touch-icon-precomposed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/public/robots.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/storage/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/application_system_test_case.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/channels/application_cable/connection_test.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/test/controllers/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/test/fixtures/files/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/test/helpers/.keep" afterDir="false" />
@@ -80,7 +19,6 @@
       <change afterPath="$PROJECT_DIR$/ror/test/mailers/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/test/models/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/test/system/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/test_helper.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/compile-cache-iseq/00/0322478df0a1aa" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/compile-cache-iseq/00/18a32fd7ca60da" afterDir="false" />
@@ -1513,10 +1451,12 @@
       <change afterPath="$PROJECT_DIR$/ror/tmp/storage/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/vendor/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/vendor/javascript/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/goal-proj-fire.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ror.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ror.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1525,7 +1465,6 @@
   </component>
   <component name="ChangesViewManager">
     <option name="groupingKeys">
-      <option value="directory" />
       <option value="repository" />
     </option>
   </component>
@@ -1546,8 +1485,18 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -1561,6 +1510,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Rails.ror.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -1570,7 +1520,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -1584,7 +1535,7 @@
       <module name="ror" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../ror" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -1599,7 +1550,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method v="2" />
@@ -1608,7 +1559,7 @@
       <module name="ror" />
       <predefined_log_file enabled="true" id="RUBY_RAKE" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/ror" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../ror" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -1632,7 +1583,7 @@
       <module name="ror" />
       <predefined_log_file enabled="true" id="RUBY_RAKE" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/ror" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../ror" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -1666,7 +1617,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709543408409</updated>
       <workItem from="1709543409848" duration="3673000" />
-      <workItem from="1709575057383" duration="1433000" />
+      <workItem from="1709575057383" duration="10316000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -1676,7 +1627,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709574123137</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ror init project">
+      <option name="closed" value="true" />
+      <created>1709576643089</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709576643089</updated>
+    </task>
+    <task id="LOCAL-00003" summary="delete master.key">
+      <option name="closed" value="true" />
+      <created>1709630589903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709630589903</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1708,6 +1675,10 @@
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
     <MESSAGE value="ror init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="ror init project" />
+    <MESSAGE value="delete master.key" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete master.key" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1709757165514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>
