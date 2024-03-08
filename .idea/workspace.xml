@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="added alive endpoint">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="added devise">
+      <change afterPath="$PROJECT_DIR$/ror/app/controllers/home_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/home/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/db/migrate/20240307161314_devise_create_users.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/ror/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709543408409</updated>
       <workItem from="1709543409848" duration="3673000" />
-      <workItem from="1709575057383" duration="11175000" />
+      <workItem from="1709575057383" duration="14110000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -206,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709757344936</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added devise">
+      <option name="closed" value="true" />
+      <created>1709827252203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709827252203</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added devise">
+      <option name="closed" value="true" />
+      <created>1709827595048</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709827595048</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,9 +260,10 @@
     <MESSAGE value="ror init project" />
     <MESSAGE value="delete master.key" />
     <MESSAGE value="added alive endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added alive endpoint" />
+    <MESSAGE value="added devise" />
+    <option name="LAST_COMMIT_MESSAGE" value="added devise" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1709757367248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1709932588179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>
