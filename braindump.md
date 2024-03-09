@@ -4,6 +4,7 @@
 Name
 Hierarchy
 IsDefault (for new goal/project)
+FK user
 
 ### Goal
 Name
@@ -16,6 +17,8 @@ Status:
 - suspended
 - someday
 - archived (closed?)
+FK user
+FK area
 
 ### Project
 Name
@@ -31,6 +34,9 @@ Status:
 - scheduled (start date / or waiting for other goal?/project/task)
 - maybe
 - archived
+FK user
+FK area
+FK goal (null)
 
 ### Task
 Name
@@ -44,7 +50,13 @@ Status:
 - next with star
   Due (enum)
   Time (enum)
+FK user
+FK area
+FK project (null ??? - what about standalone task)
 
+### Tag
+name
+FK user
 
 ### Functionality
 simple overview (yearly, monthly, weekly), check goal which overview, add summaries, view achievement from last review

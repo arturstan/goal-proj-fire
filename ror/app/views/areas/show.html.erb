@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @area %>
+
+<div>
+  <%= link_to "Edit this area", edit_area_path(@area) %> |
+  <%= link_to "Back to areas", areas_path %>
+
+  <%= button_to "Destroy this area", @area, method: :delete %>
+</div>
