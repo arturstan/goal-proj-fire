@@ -1,9 +1,10 @@
 class AreasController < ApplicationController
   before_action :set_area, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /areas or /areas.json
   def index
-    @areas = Area.all
+    @areas = Area.where(user_id: current_user.id).order(:hierarchy)
   end
 
   # GET /areas/1 or /areas/1.json
@@ -22,6 +23,7 @@ class AreasController < ApplicationController
   # POST /areas or /areas.json
   def create
     @area = Area.new(area_params)
+    @area.user_id = current_user.id
 
     respond_to do |format|
       if @area.save

@@ -1,7 +1,18 @@
 <h1>Editing area</h1>
 
-<%= render "form", area: @area %>
+<%= form_for @area do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
 
+  <p>
+    <%= f.label :isDefault %><br />
+    <%= f.check_box :isDefault %>
+  </p>
+
+  <p><%= f.submit "Save area" %></p>
+<% end %>
 <br>
 
 <div>

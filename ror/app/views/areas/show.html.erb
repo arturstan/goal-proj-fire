@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @area %>
+<p>Name: <%=h @area.name %></p>
+<p>Is default: <%=h @area.isDefault %></p>
 
 <div>
   <%= link_to "Edit this area", edit_area_path(@area) %> |
