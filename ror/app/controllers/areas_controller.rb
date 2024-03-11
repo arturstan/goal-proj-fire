@@ -24,9 +24,15 @@ class AreasController < ApplicationController
   def create
     @area = Area.new(area_params)
     @area.user_id = current_user.id
+    @area.hierarchy = Area.maximum(:hierarchy) + 1
 
     respond_to do |format|
       if @area.save
+        if @area.isDefault
+          Area.where(user_id: current_user.id)
+              .where!(id: @area.id)
+              .update_all(isDefault: false)
+        end
         format.html { redirect_to area_url(@area), notice: "Area was successfully created." }
         format.json { render :show, status: :created, location: @area }
       else
@@ -40,6 +46,11 @@ class AreasController < ApplicationController
   def update
     respond_to do |format|
       if @area.update(area_params)
+          if @area.isDefault
+            Area.where(user_id: current_user.id)
+                .where!(id: @area.id)
+                .update_all(isDefault: false)
+          end
         format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
         format.json { render :show, status: :ok, location: @area }
       else
