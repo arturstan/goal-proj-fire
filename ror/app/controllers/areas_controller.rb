@@ -30,8 +30,8 @@ class AreasController < ApplicationController
       if @area.save
         if @area.isDefault
           Area.where(user_id: current_user.id)
-              .where!(id: @area.id)
-              .update_all(isDefault: false)
+             .where.not(id: @area.id)
+             .update_all(isDefault: false)
         end
         format.html { redirect_to area_url(@area), notice: "Area was successfully created." }
         format.json { render :show, status: :created, location: @area }
@@ -46,11 +46,11 @@ class AreasController < ApplicationController
   def update
     respond_to do |format|
       if @area.update(area_params)
-          if @area.isDefault
-            Area.where(user_id: current_user.id)
-                .where!(id: @area.id)
-                .update_all(isDefault: false)
-          end
+        if @area.isDefault
+           Area.where(user_id: current_user.id)
+                .where.not(id: @area.id)
+                .update(isDefault: false)
+        end
         format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
         format.json { render :show, status: :ok, location: @area }
       else
