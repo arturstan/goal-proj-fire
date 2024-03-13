@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <p>Name: <%=h @area.name %></p>
-<p>Is default: <%=h @area.isDefault %></p>
+
+<p>Is default: <%=h @area.isDefault ? "Yes" : "No" %></p>
 
 <div>
   <%= link_to "Edit this area", edit_area_path(@area) %> |
