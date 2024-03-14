@@ -6,6 +6,10 @@ Hierarchy
 IsDefault (for new goal/project)
 FK user
 
+### Tag
+Name
+FK user
+
 ### Goal
 Name
 Description

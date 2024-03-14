@@ -2,6 +2,7 @@
 2. decision about DB: relational (eg. Sqlite, Postgresql)
 3. add DB model for:
     - area
+    - tag
     - goal
     - project
     - task

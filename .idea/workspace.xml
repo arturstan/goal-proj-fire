@@ -6,14 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="areas continued">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/controllers/tags_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/helpers/tags_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/models/tag.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/_tag.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/_tag.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/db/migrate/20240314134714_create_tags.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/test/controllers/tags_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/test/fixtures/tags.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/test/models/tag_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/test/system/tags_test.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ror.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ror.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/braindump.md" beforeDir="false" afterPath="$PROJECT_DIR$/braindump.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/plan.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,14 +79,18 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2dDX1NTUOXRrOMkh9BzhybQ8Jqu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Rails.ror.executor": "Run",
+    "Ruby.areas_controller.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -165,6 +187,29 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
+    <configuration name="areas_controller" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="ror" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/../../ror" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/../../ror/app/controllers/areas_controller.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Ruby.areas_controller" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -177,7 +222,7 @@
       <updated>1709543408409</updated>
       <workItem from="1709543409848" duration="3673000" />
       <workItem from="1709575057383" duration="21548000" />
-      <workItem from="1710192794840" duration="581000" />
+      <workItem from="1710192794840" duration="7491000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -251,7 +296,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710098792391</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="areas continued">
+      <option name="closed" value="true" />
+      <created>1710193527241</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710193527241</updated>
+    </task>
+    <task id="LOCAL-00011" summary="areas continued">
+      <option name="closed" value="true" />
+      <created>1710281472905</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710281472905</updated>
+    </task>
+    <task id="LOCAL-00012" summary="areas continued">
+      <option name="closed" value="true" />
+      <created>1710368088660</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710368088660</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +348,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
@@ -291,6 +361,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="areas continued" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1710193300424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1710367523798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710280898209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>
