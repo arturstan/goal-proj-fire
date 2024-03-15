@@ -3,12 +3,20 @@
 <h1>Tags</h1>
 
 <div id="tags">
-  <% @tags.each do |tag| %>
-    <%= render tag %>
-    <p>
-      <%= link_to "Show this tag", tag %>
-    </p>
-  <% end %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    <% @tags.each do |tag| %>
+        <tr>
+          <th><%= tag.name %></th>
+          <th>
+            <%= link_to "Edit", edit_tag_path(tag) %>
+          </th>
+        </tr>
+    <% end %>
+  </table>
 </div>
 
 <%= link_to "New tag", new_tag_path %>

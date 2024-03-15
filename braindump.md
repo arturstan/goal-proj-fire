@@ -13,7 +13,6 @@ FK user
 ### Goal
 Name
 Description
-LifeArea
 Hierarchy
 Status:
 - active
@@ -27,8 +26,6 @@ FK area
 ### Project
 Name
 Description
-Area (null)
-Goal (null)
 Tags
 Start date
 Due date
@@ -39,7 +36,7 @@ Status:
 - maybe
 - archived
 FK user
-FK area
+FK area (null)
 FK goal (null)
 
 ### Task

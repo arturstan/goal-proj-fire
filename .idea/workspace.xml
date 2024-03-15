@@ -4,34 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="areas continued">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="added tag">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/controllers/tags_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/helpers/tags_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/models/tag.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/_tag.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/_tag.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/views/tags/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/db/migrate/20240314134714_create_tags.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/controllers/tags_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/fixtures/tags.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/models/tag_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/test/system/tags_test.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braindump.md" beforeDir="false" afterPath="$PROJECT_DIR$/braindump.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/plan.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/tags/_tag.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/tags/_tag.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/tags/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/tags/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/tags/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/tags/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/tags/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/tags/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +58,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -222,7 +208,7 @@
       <updated>1709543408409</updated>
       <workItem from="1709543409848" duration="3673000" />
       <workItem from="1709575057383" duration="21548000" />
-      <workItem from="1710192794840" duration="7491000" />
+      <workItem from="1710192794840" duration="12396000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -320,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710368088660</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added tag">
+      <option name="closed" value="true" />
+      <created>1710431673687</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710431673687</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,10 +352,11 @@
     <MESSAGE value="added devise" />
     <MESSAGE value="added area model" />
     <MESSAGE value="areas continued" />
-    <option name="LAST_COMMIT_MESSAGE" value="areas continued" />
+    <MESSAGE value="added tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tag" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1710367523798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1710442662852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710280898209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>
