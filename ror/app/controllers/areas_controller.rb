@@ -70,6 +70,39 @@ class AreasController < ApplicationController
     end
   end
 
+  # PATCH/PUT /areas/1 or /areas/1.json
+  def hierarchyUp
+    h = @area.hierarchy + 1
+    @area.hierarchy = h
+    if @area.save
+      Area.where(user_id: current_user.id)
+          .where(hierarchy: h..)
+          .where.not(id: @area.id)
+          .update(hierarchy: +1)
+    format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
+    format.json { render :show, status: :ok, location: @area }
+    else
+      format.html { render :edit, status: :unprocessable_entity }
+      format.json { render json: @area.errors, status: :unprocessable_entity }
+    end
+  end
+
+  def hierarchyDown
+    h = @area.hierarchy - 1
+    @area.hierarchy = h
+    if @area.save
+      Area.where(user_id: current_user.id)
+          .where(hierarchy: h..)
+          .where.not(id: @area.id)
+          .update(hierarchy: +1)
+      format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
+      format.json { render :show, status: :ok, location: @area }
+    else
+      format.html { render :edit, status: :unprocessable_entity }
+      format.json { render json: @area.errors, status: :unprocessable_entity }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_area

@@ -26,7 +26,6 @@ FK area
 ### Project
 Name
 Description
-Tags
 Start date
 Due date
 Status:
@@ -35,9 +34,11 @@ Status:
 - scheduled (start date / or waiting for other goal?/project/task)
 - maybe
 - archived
+Star bool (???)
 FK user
 FK area (null)
 FK goal (null)
+FK Tags (multi)
 
 ### Task
 Name
@@ -49,8 +50,25 @@ Status:
 - schedule start (start date)
 - next
 - next with star
-  Due (enum)
-  Time (enum)
+Start Date
+Due Date
+Due (enum) ???
+Time (enum)
+  - 5m
+  - 10m
+  - 15m
+  - 20m
+  - 30m
+  - 45m
+  - 1h
+  - 1,5h
+  - 2h
+  - 3h
+  - 4h
+  - 5h
+  - 6h
+  - 8h
+Star bool (???)
 FK user
 FK area
 FK project (null ??? - what about standalone task)

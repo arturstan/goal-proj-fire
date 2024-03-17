@@ -16,6 +16,8 @@
         <th>
           <%= link_to "Show this area", area %> |
           <%= link_to "Edit this area", edit_area_path(area) %>
+          <%= link_to "Up", hierarchyUp_area_path(area) %>
+          <%= link_to "Down", hierarchyDown_area_path(area) %>
         </th>
       </tr>
   <% end %>
