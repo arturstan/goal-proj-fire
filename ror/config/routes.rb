@@ -14,5 +14,8 @@ Rails.application.routes.draw do
 
   get "/api/alive" => "alive#alive"
 
+  post "areas/up" => "areas#up"
+  post "areas/down" => "areas#down"
+
   root to: "home#index"
 end

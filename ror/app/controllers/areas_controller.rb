@@ -71,30 +71,27 @@ class AreasController < ApplicationController
   end
 
   # PATCH/PUT /areas/1 or /areas/1.json
-  def hierarchyUp
-    h = @area.hierarchy + 1
-    @area.hierarchy = h
-    if @area.save
+  def up
+    id = params[:id]
+    h_old = params[:hierarchy]
+    Area.where(user_id: current_user.id)
+        .where(id: id)
+        .update(hierarchy: -1)
+
       Area.where(user_id: current_user.id)
-          .where(hierarchy: h..)
-          .where.not(id: @area.id)
+          .where(hierarchy: h_old)
+          .where.not(id: id)
           .update(hierarchy: +1)
-    format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
-    format.json { render :show, status: :ok, location: @area }
-    else
-      format.html { render :edit, status: :unprocessable_entity }
-      format.json { render json: @area.errors, status: :unprocessable_entity }
-    end
   end
 
-  def hierarchyDown
-    h = @area.hierarchy - 1
-    @area.hierarchy = h
+  def down
+    h_old = @area.hierarchy
+    @area.hierarchy = h_old + 1
     if @area.save
       Area.where(user_id: current_user.id)
-          .where(hierarchy: h..)
+          .where(hierarchy: h_old)
           .where.not(id: @area.id)
-          .update(hierarchy: +1)
+          .update(hierarchy: -1)
       format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
       format.json { render :show, status: :ok, location: @area }
     else
