@@ -16,8 +16,8 @@
         <th>
           <%= link_to "Show this area", area %> |
           <%= link_to "Edit this area", edit_area_path(area) %>
-          <%= button_to "Up", areas_up_path, method: :post, :id => area.__id__, :hierarchy => area.hierarchy %>
-          <%= button_to "Down", areas_down_path, method: :post %>
+          <%= button_to "Up", action: 'up', id: area.id, hierarchy: area.hierarchy, method: :post %>
+          <%= button_to "Down", action: 'down', id: area.id, hierarchy: area.hierarchy, method: :post %>
         </th>
       </tr>
   <% end %>
