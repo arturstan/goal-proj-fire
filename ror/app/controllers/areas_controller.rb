@@ -74,30 +74,29 @@ class AreasController < ApplicationController
   def up
     id = params[:id]
     h_old = params[:hierarchy]
+    debugger
     Area.where(user_id: current_user.id)
         .where(id: id)
-        .update(hierarchy: -1)
+        .update(hierarchy: h_old - 1)
 
       Area.where(user_id: current_user.id)
           .where(hierarchy: h_old)
           .where.not(id: id)
-          .update(hierarchy: +1)
+          .update(hierarchy: h_old + 1)
   end
 
   def down
-    h_old = @area.hierarchy
-    @area.hierarchy = h_old + 1
-    if @area.save
-      Area.where(user_id: current_user.id)
-          .where(hierarchy: h_old)
-          .where.not(id: @area.id)
-          .update(hierarchy: -1)
-      format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
-      format.json { render :show, status: :ok, location: @area }
-    else
-      format.html { render :edit, status: :unprocessable_entity }
-      format.json { render json: @area.errors, status: :unprocessable_entity }
-    end
+    id = params[:id]
+    h_old = params[:hierarchy]
+    debugger
+    Area.where(user_id: current_user.id)
+        .where(id: id)
+        .update(hierarchy: h_old + 1)
+
+    Area.where(user_id: current_user.id)
+        .where(hierarchy: h_old)
+        .where.not(id: id)
+        .update(hierarchy: h_old - 1)
   end
 
   private
