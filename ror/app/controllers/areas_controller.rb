@@ -73,30 +73,44 @@ class AreasController < ApplicationController
   # PATCH/PUT /areas/1 or /areas/1.json
   def up
     id = params[:id]
-    h_old = params[:hierarchy]
-    debugger
+    h_old = params[:hierarchy].to_i
+    if h_old == 1
+      return
+    end
     Area.where(user_id: current_user.id)
         .where(id: id)
         .update(hierarchy: h_old - 1)
 
-      Area.where(user_id: current_user.id)
-          .where(hierarchy: h_old)
+    Area.where(user_id: current_user.id)
+          .where(hierarchy: h_old - 1)
           .where.not(id: id)
-          .update(hierarchy: h_old + 1)
+          .update(hierarchy: h_old)
+
+    respond_to do |format|
+      format.html { redirect_to areas_url }
+      format.json { render areas_url, status: :ok }
+    end
   end
 
   def down
     id = params[:id]
-    h_old = params[:hierarchy]
-    debugger
+    h_old = params[:hierarchy].to_i
+    max_hierarchy = Area.where(user_id: current_user.id).maximum(:hierarchy)
+    if h_old == max_hierarchy
+      return
+    end
     Area.where(user_id: current_user.id)
         .where(id: id)
         .update(hierarchy: h_old + 1)
 
     Area.where(user_id: current_user.id)
-        .where(hierarchy: h_old)
+        .where(hierarchy: h_old + 1)
         .where.not(id: id)
-        .update(hierarchy: h_old - 1)
+        .update(hierarchy: h_old)
+    respond_to do |format|
+      format.html { redirect_to areas_url }
+      format.json { render areas_url, status: :ok }
+    end
   end
 
   private
