@@ -2,13 +2,35 @@
 
 <h1>Goals</h1>
 
+<% max_hierarchy = @goals.maximum(:hierarchy) %>
 <div id="goals">
-  <% @goals.each do |goal| %>
-    <%= render goal %>
-    <p>
-      <%= link_to "Show this goal", goal %>
-    </p>
-  <% end %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+    <% @goals.each do |goal| %>
+    <tr>
+      <th><%= area.name %></th>
+      <th><%= area.description.slice(0, 20) %></th>
+      <th><%= area.status %></th>
+      <th>
+        <p>
+          <%= link_to "Show this goal", goal %>
+          <%= link_to "Edit", edit_goal_path(goal) %>
+          <% if goal.hierarchy > 1 %>
+            <%= button_to "Up", action: 'up', id: goal.id, hierarchy: goal.hierarchy, method: :post, class: 'inline' %>
+          <% end %>
+          <% if goal.hierarchy < max_hierarchy %>
+            <%= button_to "Down", action: 'down', id: goal.id, hierarchy: goal.hierarchy, method: :post, class: 'inline' %>
+          <% end %>
+        </p>
+      </th>
+    </tr>
+    <% end %>
+  </table>
 </div>
 
 <%= link_to "New goal", new_goal_path %>

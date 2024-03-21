@@ -14,8 +14,8 @@
         <th><%= area.isDefault ? "Yes" : "" %></th>
         <th><%= area.name %></th>
         <th>
-          <%= link_to "Show this area", area %> |
-          <%= link_to "Edit this area", edit_area_path(area) %>
+          <%= link_to "Show", area %> |
+          <%= link_to "Edit", edit_area_path(area) %>
           <% if area.hierarchy > 1 %>
             <%= button_to "Up", action: 'up', id: area.id, hierarchy: area.hierarchy, method: :post, class: 'inline' %>
           <% end %>

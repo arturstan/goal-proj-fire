@@ -121,6 +121,6 @@ class AreasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def area_params
-      params.require(:area).permit(:user_id, :name, :hierarchy, :isDefault)
+      params.require(:area).permit(:name, :hierarchy, :isDefault)
     end
 end

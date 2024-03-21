@@ -1,5 +1,6 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /goals or /goals.json
   def index
@@ -59,6 +60,48 @@ class GoalsController < ApplicationController
     end
   end
 
+  def up
+    id = params[:id]
+    h_old = params[:hierarchy].to_i
+    if h_old == 1
+      return
+    end
+    Goal.where(user_id: current_user.id)
+        .where(id: id)
+        .update(hierarchy: h_old - 1)
+
+    Goal.where(user_id: current_user.id)
+        .where(hierarchy: h_old - 1)
+        .where.not(id: id)
+        .update(hierarchy: h_old)
+
+    respond_to do |format|
+      format.html { redirect_to goals_url }
+      format.json { render goals_url, status: :ok }
+    end
+  end
+
+  def down
+    id = params[:id]
+    h_old = params[:hierarchy].to_i
+    max_hierarchy = Goal.where(user_id: current_user.id).maximum(:hierarchy)
+    if h_old == max_hierarchy
+      return
+    end
+    Goal.where(user_id: current_user.id)
+        .where(id: id)
+        .update(hierarchy: h_old + 1)
+
+    Goal.where(user_id: current_user.id)
+        .where(hierarchy: h_old + 1)
+        .where.not(id: id)
+        .update(hierarchy: h_old)
+    respond_to do |format|
+      format.html { redirect_to goals_url }
+      format.json { render goals_url, status: :ok }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_goal
@@ -67,6 +110,6 @@ class GoalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def goal_params
-      params.require(:goal).permit(:user_id, :area_id, :name, :description, :hierarchy, :status)
+      params.require(:goal).permit(:area_id, :name, :description, :hierarchy, :status)
     end
 end
