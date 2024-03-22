@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="area hierarchy">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="goal hierarchy">
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/models/goal.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/models/goal.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/goals/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +207,7 @@
       <updated>1709543408409</updated>
       <workItem from="1709543409848" duration="3673000" />
       <workItem from="1709575057383" duration="21548000" />
-      <workItem from="1710192794840" duration="36777000" />
+      <workItem from="1710192794840" duration="41281000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -366,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710968420458</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="goal hierarchy">
+      <option name="closed" value="true" />
+      <created>1711054908435</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1711054908435</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +393,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="e75bfb9d-f638-43f6-9134-c9fbbf4d123b">
@@ -409,7 +426,8 @@
     <MESSAGE value="added goal" />
     <MESSAGE value="area hierarchy (tbc)" />
     <MESSAGE value="area hierarchy" />
-    <option name="LAST_COMMIT_MESSAGE" value="area hierarchy" />
+    <MESSAGE value="goal hierarchy" />
+    <option name="LAST_COMMIT_MESSAGE" value="goal hierarchy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,7 +437,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1710933321751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1711137283714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710888394756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>

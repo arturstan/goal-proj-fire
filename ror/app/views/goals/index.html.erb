@@ -6,16 +6,18 @@
 <div id="goals">
   <table>
     <tr>
+      <th>Status</th>
       <th>Name</th>
       <th>Description</th>
-      <th>Status</th>
+      <th>Area</th>
       <th></th>
     </tr>
     <% @goals.each do |goal| %>
     <tr>
-      <th><%= area.name %></th>
-      <th><%= area.description.slice(0, 20) %></th>
-      <th><%= area.status %></th>
+      <th><%= goal.status %></th>
+      <th><%= goal.name %></th>
+      <th><%= goal.description.slice(0, 20) %></th>
+      <th><%= %></th>
       <th>
         <p>
           <%= link_to "Show this goal", goal %>

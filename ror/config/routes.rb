@@ -17,5 +17,8 @@ Rails.application.routes.draw do
   post "areas/:id/up" => "areas#up"
   post "areas/:id/down" => "areas#down"
 
+  post "goals/:id/up" => "goals#up"
+  post "goals/:id/down" => "goals#down"
+
   root to: "home#index"
 end

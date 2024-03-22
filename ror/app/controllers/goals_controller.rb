@@ -24,7 +24,7 @@ class GoalsController < ApplicationController
   def create
     @goal = Goal.new(goal_params)
     @goal.user_id = current_user.id
-    @goal.hierarchy = Goal.where(user_id: current_user.id).maximum(:hierarchy) + 1
+    @goal.hierarchy = Goal.where(user_id: current_user.id).maximum(:hierarchy).to_i + 1
 
     respond_to do |format|
       if @goal.save

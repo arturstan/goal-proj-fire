@@ -1,6 +1,27 @@
 <h1>Editing goal</h1>
 
-<%= render "form", goal: @goal %>
+<%= form_for @goal do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :status %><br />
+    <%= f.select :status, Goal.statuses.keys %>
+  </p>
+
+  <p>
+    <%= f.label :area %><br />
+  </p>
+
+  <p><%= f.submit "Save" %></p>
+<% end %>
 
 <br>
 

@@ -24,7 +24,7 @@ class AreasController < ApplicationController
   def create
     @area = Area.new(area_params)
     @area.user_id = current_user.id
-    @area.hierarchy = Area.where(user_id: current_user.id).maximum(:hierarchy) + 1
+    @area.hierarchy = Area.where(user_id: current_user.id).maximum(:hierarchy).to_i + 1
 
     respond_to do |format|
       if @area.save
