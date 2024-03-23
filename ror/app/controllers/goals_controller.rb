@@ -1,5 +1,6 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: %i[ show edit update destroy ]
+  before_action :set_areas, only: %i[ new edit ]
   before_action :authenticate_user!
 
   # GET /goals or /goals.json
@@ -106,6 +107,12 @@ class GoalsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_goal
       @goal = Goal.find(params[:id])
+    end
+
+    def set_areas
+      @areas = [['', nil]] +
+        Area.where(user_id: current_user.id).order(:hierarchy)
+            .map { |area| [area.name, area.id] }
     end
 
     # Only allow a list of trusted parameters through.

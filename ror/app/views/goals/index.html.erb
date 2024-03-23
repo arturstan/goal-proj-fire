@@ -17,7 +17,7 @@
       <th><%= goal.status %></th>
       <th><%= goal.name %></th>
       <th><%= goal.description.slice(0, 20) %></th>
-      <th><%= %></th>
+      <th><%= goal.area.name if goal.area %></th>
       <th>
         <p>
           <%= link_to "Show this goal", goal %>

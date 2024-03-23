@@ -18,6 +18,7 @@
 
   <p>
     <%= f.label :area %><br />
+    <%= f.select(:area_id, options_for_select(@areas, selected: nil)) %>
   </p>
 
   <p><%= f.submit "Create" %></p>

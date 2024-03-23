@@ -18,6 +18,7 @@
 
   <p>
     <%= f.label :area %><br />
+    <%= f.select(:area_id, options_for_select(@areas, selected: @goal.area_id)) %>
   </p>
 
   <p><%= f.submit "Save" %></p>
