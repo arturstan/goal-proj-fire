@@ -26,6 +26,7 @@ FK area
 ### Project
 Name
 Description
+Hierarchy
 Start date
 Due date
 Status:
@@ -34,7 +35,7 @@ Status:
 - scheduled (start date / or waiting for other goal?/project/task)
 - maybe
 - archived
-Star bool (???)
+Star bool
 FK user
 FK area (null)
 FK goal (null)

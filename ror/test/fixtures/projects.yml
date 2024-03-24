@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  area: one
+  goal: one
+  name: MyString
+  description: MyString
+  hierarchy: 1
+  status: 1
+  start_date: 2024-03-24
+  due_date: 2024-03-24
+  star: false
+
+two:
+  user: two
+  area: two
+  goal: two
+  name: MyString
+  description: MyString
+  hierarchy: 1
+  status: 1
+  start_date: 2024-03-24
+  due_date: 2024-03-24
+  star: false

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   resources :goals
   resources :tags
   resources :areas
