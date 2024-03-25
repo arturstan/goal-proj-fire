@@ -8,3 +8,4 @@
     - task
 
 4. Add views (RoR)
+5. Deploy (where and how)

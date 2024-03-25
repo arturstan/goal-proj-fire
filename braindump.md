@@ -33,7 +33,7 @@ Status:
 - active
 - suspended
 - scheduled (start date / or waiting for other goal?/project/task)
-- maybe
+- someday
 - archived
 Star bool
 FK user
@@ -46,11 +46,11 @@ Name
 Description
 Status:
 - inbox
+- next
 - standalone
 - waiting
-- schedule start (start date)
-- next
-- next with star
+- schedule start (start date required)
+Star (bool)
 Start Date
 Due Date
 Due (enum) ???
@@ -69,7 +69,6 @@ Time (enum)
   - 5h
   - 6h
   - 8h
-Star bool (???)
 FK user
 FK area
 FK project (null ??? - what about standalone task)
