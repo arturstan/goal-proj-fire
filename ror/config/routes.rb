@@ -21,5 +21,8 @@ Rails.application.routes.draw do
   post "goals/:id/up" => "goals#up"
   post "goals/:id/down" => "goals#down"
 
+  post "projects/:id/up" => "projects#up"
+  post "projects/:id/down" => "projects#down"
+
   root to: "home#index"
 end

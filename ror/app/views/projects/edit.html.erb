@@ -1,6 +1,48 @@
 <h1>Editing project</h1>
 
-<%= render "form", project: @project %>
+<%= form_for @project do |f| %>
+  <p>
+    <%= f.label :star %><br />
+    <%= f.check_box :star %>
+  </p>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :area %><br />
+    <%= f.select(:area_id, options_for_select(@areas, selected: @project.area_id)) %>
+  </p>
+
+  <p>
+    <%= f.label :goal %><br />
+    <%= f.select(:goal_id, options_for_select(@goals, selected: @project.area_id)) %>
+  </p>
+
+  <p>
+    <%= f.label :status %><br />
+    <%= f.select :status, Project.statuses.keys %>
+  </p>
+
+  <p>
+    <%= f.label :start_date %><br />
+    <%= f.date_field :start_date %>
+  </p>
+
+  <p>
+    <%= f.label :due_date %><br />
+    <%= f.date_field :due_date %>
+  </p>
+
+  <p><%= f.submit "Save" %></p>
+<% end %>
 
 <br>
 

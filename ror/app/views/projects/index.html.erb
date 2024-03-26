@@ -2,13 +2,41 @@
 
 <h1>Projects</h1>
 
+<% max_hierarchy = @projects.maximum(:hierarchy) %>
 <div id="projects">
+  <table>
+    <tr>
+      <th>Star</th>
+      <th>Status</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Goal</th>
+      <th>Area</th>
+      <th></th>
+    </tr>
   <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
+      <tr>
+        <th><%= project.star %></th>
+        <th><%= project.status %></th>
+        <th><%= project.name %></th>
+        <th><%= project.description.slice(0, 20) %></th>
+        <th><%= project.goal.name if project.goal %></th>
+        <th><%= project.area.name if project.area %></th>
+        <th>
+          <p>
+            <%= link_to "Show this project", goal %>
+            <%= link_to "Edit", edit_project_path(project) %>
+            <% if project.hierarchy > 1 %>
+              <%= button_to "Up", action: 'up', id: project.id, hierarchy: project.hierarchy, method: :post, class: 'inline' %>
+            <% end %>
+            <% if project.hierarchy < max_hierarchy %>
+              <%= button_to "Down", action: 'down', id: project.id, hierarchy: project.hierarchy, method: :post, class: 'inline' %>
+            <% end %>
+          </p>
+        </th>
+      </tr>
   <% end %>
+    </table>
 </div>
 
 <%= link_to "New project", new_project_path %>
