@@ -1,26 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 class="text-2xl font-bold">Areas</h1>
+<h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Areas</h1>
 <% max_hierarchy = @areas.maximum(:hierarchy) %>
-<div id="areas">
-  <table>
+<div id="areas" class="justify-center" style="display: flex; justify-content: center;">
+<table style="margin-left: auto; margin-right: auto;">
   <tr>
     <th>Default</th>
     <th>Name</th>
     <th></th>
   </tr>
+  <br>
   <% @areas.each do |area| %>
       <tr>
-        <th><%= area.isDefault ? "Yes" : "" %></th>
-        <th><%= area.name %></th>
-        <th>
-          <%= link_to "Show", area %> |
-          <%= link_to "Edit", edit_area_path(area) %>
+        <th class="text-left"><%= area.isDefault ? "Yes" : "" %></th>
+        <th class="text-left px-2"><%= area.name %></th>
+        <th class="flex items-center space-x-2">
+          <%= link_to "Show", area, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+          <%= link_to "Edit", edit_area_path(area), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
           <% if area.hierarchy > 1 %>
-            <%= button_to "Up", action: 'up', id: area.id, hierarchy: area.hierarchy, method: :post, class: 'inline' %>
+            <%= button_to "Up", { action: 'up', id: area.id, hierarchy: area.hierarchy, method: :post }, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
           <% end %>
           <% if area.hierarchy < max_hierarchy %>
-            <%= button_to "Down", action: 'down', id: area.id, hierarchy: area.hierarchy, method: :post, class: 'inline' %>
+            <%= button_to "Down", { action: 'down', id: area.id, hierarchy: area.hierarchy, method: :post}, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
           <% end %>
         </th>
       </tr>
@@ -28,4 +29,6 @@
   </table>
 </div>
 
-<%= link_to "New area", new_area_path, class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+<div class="justify-center py-4" style="display: flex; justify-content: center;">
+  <%= link_to "New area", new_area_path, class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+</div>

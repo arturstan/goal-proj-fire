@@ -34,6 +34,7 @@
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:devise" />
+        <option value="rails_live_reload:install" />
         <option value="resource" />
         <option value="responders:install" />
         <option value="responders_controller" />
@@ -75,6 +76,7 @@
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:devise" />
+        <option value="rails_live_reload:install" />
         <option value="resource" />
         <option value="responders:install" />
         <option value="responders_controller" />
@@ -480,36 +482,6 @@
                   <RakeTaskImpl description="Switch on Redis and use it in development" fullCommand="turbo:install:redis" id="redis" />
                 </subtasks>
               </RakeTaskImpl>
-            </subtasks>
-          </RakeTaskImpl>
-          <RakeTaskImpl description="Lists all available tasks in Webpacker" fullCommand="webpacker" id="webpacker" />
-          <RakeTaskImpl id="webpacker">
-            <subtasks>
-              <RakeTaskImpl description="Installs Webpacker binstubs in this application" fullCommand="webpacker:binstubs" id="binstubs" />
-              <RakeTaskImpl description="Verifies that webpack &amp; webpack-dev-server are present" fullCommand="webpacker:check_binstubs" id="check_binstubs" />
-              <RakeTaskImpl description="Verifies if Node.js is installed" fullCommand="webpacker:check_node" id="check_node" />
-              <RakeTaskImpl description="Verifies if Yarn is installed" fullCommand="webpacker:check_yarn" id="check_yarn" />
-              <RakeTaskImpl description="Remove old compiled webpacks" fullCommand="webpacker:clean[keep,age]" id="clean[keep,age]" />
-              <RakeTaskImpl description="Remove the webpack compiled output directory" fullCommand="webpacker:clobber" id="clobber" />
-              <RakeTaskImpl description="Compile JavaScript packs using webpack for production with digests" fullCommand="webpacker:compile" id="compile" />
-              <RakeTaskImpl description="Provide information on Webpacker's environment" fullCommand="webpacker:info" id="info" />
-              <RakeTaskImpl description="Install Webpacker in this application" fullCommand="webpacker:install" id="install" />
-              <RakeTaskImpl id="install">
-                <subtasks>
-                  <RakeTaskImpl description="Install everything needed for Angular" fullCommand="webpacker:install:angular" id="angular" />
-                  <RakeTaskImpl description="Install everything needed for Coffee" fullCommand="webpacker:install:coffee" id="coffee" />
-                  <RakeTaskImpl description="Install everything needed for Elm" fullCommand="webpacker:install:elm" id="elm" />
-                  <RakeTaskImpl description="Install everything needed for Erb" fullCommand="webpacker:install:erb" id="erb" />
-                  <RakeTaskImpl description="Install everything needed for React" fullCommand="webpacker:install:react" id="react" />
-                  <RakeTaskImpl description="Install everything needed for Stimulus" fullCommand="webpacker:install:stimulus" id="stimulus" />
-                  <RakeTaskImpl description="Install everything needed for Svelte" fullCommand="webpacker:install:svelte" id="svelte" />
-                  <RakeTaskImpl description="Install everything needed for Typescript" fullCommand="webpacker:install:typescript" id="typescript" />
-                  <RakeTaskImpl description="Install everything needed for Vue" fullCommand="webpacker:install:vue" id="vue" />
-                </subtasks>
-              </RakeTaskImpl>
-              <RakeTaskImpl description="Verifies if Webpacker is installed" fullCommand="webpacker:verify_install" id="verify_install" />
-              <RakeTaskImpl description="Support for older Rails versions" fullCommand="webpacker:yarn_install" id="yarn_install" />
-              <RakeTaskImpl description="" fullCommand="webpacker:clean" id="clean" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl id="yarn">

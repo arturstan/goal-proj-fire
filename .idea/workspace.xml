@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="add tailwind">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="tailwind, first use">
       <change afterPath="$PROJECT_DIR$/ror/Procfile.dev" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ror/app/assets/stylesheets/wind.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/ror.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ror.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/ror/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ror/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/assets/builds/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/assets/builds/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/javascript/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/javascript/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
@@ -213,7 +209,7 @@
       <workItem from="1710192794840" duration="54859000" />
       <workItem from="1711386649576" duration="6336000" />
       <workItem from="1711569255158" duration="1281000" />
-      <workItem from="1711570926062" duration="4642000" />
+      <workItem from="1711570926062" duration="13531000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -431,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711572358368</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="tailwind, first use">
+      <option name="closed" value="true" />
+      <created>1711646758563</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1711646758563</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +490,8 @@
     <MESSAGE value="added project" />
     <MESSAGE value="projects (tbc)" />
     <MESSAGE value="add tailwind" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tailwind" />
+    <MESSAGE value="tailwind, first use" />
+    <option name="LAST_COMMIT_MESSAGE" value="tailwind, first use" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -496,7 +501,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1711645663112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1711746402016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710888394756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>
