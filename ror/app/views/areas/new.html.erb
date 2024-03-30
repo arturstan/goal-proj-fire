@@ -1,4 +1,5 @@
-<h1>New area</h1>
+<div class="max-w-sm mx-auto">
+  <h1 class="text-2xl">New area</h1>
 
 <%= form_for @area do |f| %>
   <p>
@@ -7,15 +8,11 @@
   </p>
 
   <p>
-    <%= f.label :isDefault %><br />
+    <%= f.label "Is default?" %><br />
     <%= f.check_box :isDefault %>
   </p>
 
-  <p><%= f.submit "Create area" %></p>
+    <%= f.submit "Create", class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+    <%= link_to "Back to areas", areas_path, class: "text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
 <% end %>
-
-<br>
-
-<div>
-  <%= link_to "Back to areas", areas_path %>
 </div>
