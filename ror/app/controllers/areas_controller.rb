@@ -33,7 +33,7 @@ class AreasController < ApplicationController
              .where.not(id: @area.id)
              .update_all(isDefault: false)
         end
-        format.html { redirect_to area_url(@area), notice: "Area was successfully created." }
+        format.html { redirect_to areas_url, notice: "Area was successfully created." }
         format.json { render :show, status: :created, location: @area }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class AreasController < ApplicationController
                 .where.not(id: @area.id)
                 .update(isDefault: false)
         end
-        format.html { redirect_to area_url(@area), notice: "Area was successfully updated." }
+        format.html { redirect_to areas_url, notice: "Area was successfully updated." }
         format.json { render :show, status: :ok, location: @area }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -117,6 +117,9 @@ class AreasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_area
       @area = Area.find(params[:id])
+      if @area.user_id != current_user.id
+        redirect_to areas_url, notice: "You can't access this area"
+      end
     end
 
     # Only allow a list of trusted parameters through.

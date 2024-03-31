@@ -10,7 +10,10 @@
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/tags_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
@@ -205,7 +208,7 @@
       <workItem from="1710192794840" duration="54859000" />
       <workItem from="1711386649576" duration="6336000" />
       <workItem from="1711569255158" duration="1281000" />
-      <workItem from="1711570926062" duration="15053000" />
+      <workItem from="1711570926062" duration="16499000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -439,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711749179778</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="tailwind (next view)">
+      <option name="closed" value="true" />
+      <created>1711835804582</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1711835804582</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
