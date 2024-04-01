@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="tailwind (next view)">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="1. after new, update, redirect to index&#10;2. check if user has access to object">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/tags_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/assets/builds/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/assets/builds/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
@@ -208,7 +209,7 @@
       <workItem from="1710192794840" duration="54859000" />
       <workItem from="1711386649576" duration="6336000" />
       <workItem from="1711569255158" duration="1281000" />
-      <workItem from="1711570926062" duration="16499000" />
+      <workItem from="1711570926062" duration="22057000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -450,7 +451,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711835804582</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="1. after new, update, redirect to index&#10;2. check if user has access to object">
+      <option name="closed" value="true" />
+      <created>1711896423873</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1711896423873</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +516,8 @@
     <MESSAGE value="add tailwind" />
     <MESSAGE value="tailwind, first use" />
     <MESSAGE value="tailwind (next view)" />
-    <option name="LAST_COMMIT_MESSAGE" value="tailwind (next view)" />
+    <MESSAGE value="1. after new, update, redirect to index&#10;2. check if user has access to object" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. after new, update, redirect to index&#10;2. check if user has access to object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,7 +527,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1711835729492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1711997180510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710888394756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>

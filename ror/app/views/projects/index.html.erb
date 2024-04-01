@@ -24,7 +24,7 @@
         <th><%= project.area.name if project.area %></th>
         <th>
           <p>
-            <%= link_to "Show this project", goal %>
+            <%= link_to "Show this project", project %>
             <%= link_to "Edit", edit_project_path(project) %>
             <% if project.hierarchy > 1 %>
               <%= button_to "Up", action: 'up', id: project.id, hierarchy: project.hierarchy, method: :post, class: 'inline' %>
