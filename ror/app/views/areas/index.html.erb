@@ -15,7 +15,6 @@
         <th class="text-left"><%= area.isDefault ? "Yes" : "" %></th>
         <th class="text-left px-2"><%= area.name %></th>
         <th class="flex items-center space-x-2">
-          <%= link_to "Show", area, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
           <%= link_to "Edit", edit_area_path(area), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
           <% if area.hierarchy > 1 %>
             <%= button_to "Up", { action: 'up', id: area.id, hierarchy: area.hierarchy, method: :post }, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>

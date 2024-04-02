@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Goals</h1>
+<h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Goals</h1>
 
 <% max_hierarchy = @goals.maximum(:hierarchy) %>
-<div id="goals">
+<div id="goals" class="justify-center" style="display: flex; justify-content: center;">
   <table>
     <tr>
       <th>Status</th>
@@ -14,25 +14,24 @@
     </tr>
     <% @goals.each do |goal| %>
     <tr>
-      <th><%= goal.status %></th>
-      <th><%= goal.name %></th>
-      <th><%= goal.description.slice(0, 20) %></th>
-      <th><%= goal.area.name if goal.area %></th>
-      <th>
-        <p>
-          <%= link_to "Show this goal", goal %>
-          <%= link_to "Edit", edit_goal_path(goal) %>
-          <% if goal.hierarchy > 1 %>
-            <%= button_to "Up", action: 'up', id: goal.id, hierarchy: goal.hierarchy, method: :post, class: 'inline' %>
-          <% end %>
-          <% if goal.hierarchy < max_hierarchy %>
-            <%= button_to "Down", action: 'down', id: goal.id, hierarchy: goal.hierarchy, method: :post, class: 'inline' %>
-          <% end %>
-        </p>
+      <th class="text-left"><%= goal.status %></th>
+      <th class="text-left px-2"><%= goal.name %></th>
+      <th class="text-left px-2"><%= goal.description.slice(0, 20) %></th>
+      <th class="text-left px-2"><%= goal.area.name if goal.area %></th>
+      <th class="flex items-center space-x-2">
+        <%= link_to "Edit", edit_goal_path(goal), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+        <% if goal.hierarchy > 1 %>
+          <%= button_to "Up", { action: 'up', id: goal.id, hierarchy: goal.hierarchy, method: :post }, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
+        <% end %>
+        <% if goal.hierarchy < max_hierarchy %>
+          <%= button_to "Down", { action: 'down', id: goal.id, hierarchy: goal.hierarchy, method: :post}, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
+        <% end %>
       </th>
     </tr>
     <% end %>
   </table>
 </div>
 
-<%= link_to "New goal", new_goal_path %>
+<div class="justify-center py-4" style="display: flex; justify-content: center;">
+  <%= link_to "New goal", new_goal_path, class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+</div>
