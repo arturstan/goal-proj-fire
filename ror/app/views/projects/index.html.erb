@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Projects</h1>
+<h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Projects</h1>
 
 <% max_hierarchy = @projects.maximum(:hierarchy) %>
-<div id="projects">
-  <table>
+<div id="projects" class="justify-center" style="display: flex; justify-content: center;">
+  <table style="margin-left: auto; margin-right: auto;">
     <tr>
       <th>Star</th>
       <th>Status</th>
@@ -17,26 +17,25 @@
   <% @projects.each do |project| %>
       <tr>
         <th><%= project.star %></th>
-        <th><%= project.status %></th>
-        <th><%= project.name %></th>
-        <th><%= project.description.slice(0, 20) %></th>
-        <th><%= project.goal.name if project.goal %></th>
-        <th><%= project.area.name if project.area %></th>
-        <th>
-          <p>
-            <%= link_to "Show this project", project %>
-            <%= link_to "Edit", edit_project_path(project) %>
-            <% if project.hierarchy > 1 %>
-              <%= button_to "Up", action: 'up', id: project.id, hierarchy: project.hierarchy, method: :post, class: 'inline' %>
-            <% end %>
-            <% if project.hierarchy < max_hierarchy %>
-              <%= button_to "Down", action: 'down', id: project.id, hierarchy: project.hierarchy, method: :post, class: 'inline' %>
-            <% end %>
-          </p>
+        <th class="text-left px-2"><%= project.status %></th>
+        <th class="text-left px-2"><%= project.name %></th>
+        <th class="text-left px-2"><%= project.description.slice(0, 20) %></th>
+        <th class="text-left px-2"><%= project.goal.name if project.goal %></th>
+        <th class="text-left px-2"><%= project.area.name if project.area %></th>
+        <th class="flex items-center space-x-2">
+          <%= link_to "Edit", edit_project_path(project), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+          <% if project.hierarchy > 1 %>
+            <%= button_to "Up", { action: 'up', id: project.id, hierarchy: project.hierarchy, method: :post }, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
+          <% end %>
+          <% if project.hierarchy < max_hierarchy %>
+            <%= button_to "Down", { action: 'down', id: project.id, hierarchy: project.hierarchy, method: :post}, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
+          <% end %>
         </th>
       </tr>
   <% end %>
     </table>
 </div>
 
-<%= link_to "New project", new_project_path %>
+<div class="justify-center py-4" style="display: flex; justify-content: center;">
+  <%= link_to "New project", new_project_path, class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+</div>

@@ -1,31 +1,30 @@
-<h1>New goal</h1>
+<div class="max-w-sm mx-auto">
 
-<%= form_for @goal do |f| %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
+  <h1 class="text-2xl">New goal</h1>
 
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
+  <%= form_for @goal do |f| %>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
 
-  <p>
-    <%= f.label :status %><br />
-    <%= f.select :status, Goal.statuses.keys %>
-  </p>
+    <p>
+      <%= f.label :description %><br />
+      <%= f.text_area :description %>
+    </p>
 
-  <p>
-    <%= f.label :area %><br />
-    <%= f.select(:area_id, options_for_select(@areas, selected: nil)) %>
-  </p>
+    <p>
+      <%= f.label :status %><br />
+      <%= f.select :status, Goal.statuses.keys %>
+    </p>
 
-  <p><%= f.submit "Create" %></p>
-<% end %>
-
-<br>
-
-<div>
-  <%= link_to "Back to goals", goals_path %>
+    <p>
+      <%= f.label :area %><br />
+      <%= f.select(:area_id, options_for_select(@areas, selected: nil)) %>
+    </p>
+    <p class="py-2.5">
+      <%= f.submit "Create", class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+      <%= link_to "Back to goals", goals_path, class: "text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
+    </p>
+  <% end %>
 </div>
