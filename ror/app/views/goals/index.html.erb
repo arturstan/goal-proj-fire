@@ -15,7 +15,9 @@
     <% @goals.each do |goal| %>
     <tr>
       <th class="text-left"><%= goal.status %></th>
-      <th class="text-left px-2"><%= goal.name %></th>
+      <th class="text-left px-2">
+        <%= link_to goal.name, goal_path(goal) %>
+      </th>
       <th class="text-left px-2"><%= goal.description.slice(0, 20) %></th>
       <th class="text-left px-2"><%= goal.area.name if goal.area %></th>
       <th class="flex items-center space-x-2">

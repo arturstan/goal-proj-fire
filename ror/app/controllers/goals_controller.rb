@@ -1,6 +1,6 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: %i[ show edit update destroy ]
-  before_action :set_areas, only: %i[ new edit ]
+  before_action :set_areas, only: %i[ new edit create update ]
   before_action :authenticate_user!
 
   # GET /goals or /goals.json
