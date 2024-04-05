@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="goal view (tbc)">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="names of area, goal, project are required">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/models/area.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/models/area.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/models/goal.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/models/goal.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/models/project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/models/project.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
@@ -43,14 +34,12 @@
     &quot;assignee&quot;: &quot;arturstan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="602c48c2-6a7c-45dc-9904-9a6b14d40e1f" />
-        <option name="url" value="https://github.com/arturstan/goal-proj-fire.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/arturstan/goal-proj-fire.git&quot;,
+    &quot;accountId&quot;: &quot;602c48c2-6a7c-45dc-9904-9a6b14d40e1f&quot;
+  }
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -103,12 +92,12 @@
   </component>
   <component name="RunManager" selected="Rails.ror">
     <configuration name="ror" type="RailsRunConfigurationType" factoryName="Rails">
-      <module name="ror" />
+      <module name="goal-proj-fire" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../ror" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="rbenv: 3.3.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
@@ -195,6 +184,12 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Rails.ror" />
+      <item itemvalue="Rake.spec: ror" />
+      <item itemvalue="Rake.test: ror" />
+      <item itemvalue="Ruby.areas_controller" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Ruby.areas_controller" />
@@ -216,7 +211,13 @@
       <workItem from="1711386649576" duration="6336000" />
       <workItem from="1711569255158" duration="1281000" />
       <workItem from="1711570926062" duration="24127000" />
-      <workItem from="1712053381479" duration="8765000" />
+      <workItem from="1712053381479" duration="9215000" />
+      <workItem from="1712249891319" duration="44000" />
+      <workItem from="1712249939701" duration="885000" />
+      <workItem from="1712336993490" duration="13000" />
+      <workItem from="1712337149512" duration="820000" />
+      <workItem from="1712338012842" duration="602000" />
+      <workItem from="1712338620860" duration="163000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -490,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712174764807</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="names of area, goal, project are required">
+      <option name="closed" value="true" />
+      <created>1712249534333</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712249534333</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +559,8 @@
     <MESSAGE value="1. after new, update, redirect to index&#10;2. check if user has access to object" />
     <MESSAGE value="add layout" />
     <MESSAGE value="goal view (tbc)" />
-    <option name="LAST_COMMIT_MESSAGE" value="goal view (tbc)" />
+    <MESSAGE value="names of area, goal, project are required" />
+    <option name="LAST_COMMIT_MESSAGE" value="names of area, goal, project are required" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
