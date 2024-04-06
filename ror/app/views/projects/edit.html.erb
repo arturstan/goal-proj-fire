@@ -1,4 +1,17 @@
 <div class="max-w-sm mx-auto">
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this area from being saved:</h2>
+
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+
 <h1 class="text-2xl">Editing project</h1>
 
 <%= form_for @project do |f| %>
@@ -24,7 +37,7 @@
 
   <p>
     <%= f.label :goal %><br />
-    <%= f.select(:goal_id, options_for_select(@goals, selected: @project.area_id)) %>
+    <%= f.select(:goal_id, options_for_select(@goals, selected: @project.goal_id)) %>
   </p>
 
   <p>

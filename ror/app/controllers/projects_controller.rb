@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
-  before_action :set_areas, only: %i[ new edit ]
-  before_action :set_goals, only: %i[ new edit ]
+  before_action :set_areas, only: %i[ new edit create update ]
+  before_action :set_goals, only: %i[ new edit create update ]
   before_action :authenticate_user!
 
   # GET /projects or /projects.json

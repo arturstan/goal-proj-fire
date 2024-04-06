@@ -1,5 +1,16 @@
 <div class="max-w-sm mx-auto">
+  <% if @area.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@area.errors.count, "error") %> prohibited this area from being saved:</h2>
 
+      <ul>
+        <% @area.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
   <h1 class="text-2xl">Editing area</h1>
   <br>
 
