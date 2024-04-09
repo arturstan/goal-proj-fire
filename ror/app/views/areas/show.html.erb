@@ -1,12 +1,42 @@
 <p style="color: green"><%= notice %></p>
 
-<p>Name: <%=h @area.name %></p>
+<h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;"><%=h @area.name %></h1>
+<div id="areas" class="justify-center" style="display: flex; justify-content: center;">
+  <p>Is default: <%=h @area.isDefault ? "Yes" : "No" %></p>
+  <br>
+  <p class="py-2.5">
+    <%= link_to "Edit", edit_area_path(@area), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+    <%= link_to "Delete", @area, method: :delete, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+    <%= link_to "Back to areas", areas_path, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+  </p>
 
-<p>Is default: <%=h @area.isDefault ? "Yes" : "No" %></p>
+  <h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Goals</h1>
 
-<div>
-  <%= link_to "Edit this area", edit_area_path(@area) %> |
-  <%= link_to "Back to areas", areas_path %>
+  <% max_hierarchy = @goals.maximum(:hierarchy) %>
+  <div id="goals" class="justify-center" style="display: flex; justify-content: center;">
+    <table>
+      <tr>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Area</th>
+        <th></th>
+      </tr>
+      <% @goals.each do |goal| %>
+        <tr>
+          <th class="text-left"><%= goal.status %></th>
+          <th class="text-left px-2">
+            <%= link_to goal.name, goal_path(goal), style: "text-decoration-line: underline;"  %>
+          </th>
+          <th class="text-left px-2"><%= goal.description.slice(0, 20) %></th>
+          <th class="text-left px-2"><%= goal.area.name if goal.area %></th>
+          <th class="flex items-center space-x-2">
+            <%= link_to "Edit", edit_goal_path(goal), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+          </th>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 
-  <%= button_to "Destroy this area", @area, method: :delete %>
 </div>
+
