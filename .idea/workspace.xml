@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="area - changes in css">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="show goals on area details (tbc)">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
@@ -217,7 +217,7 @@
       <workItem from="1712336993490" duration="13000" />
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
-      <workItem from="1712338620860" duration="12021000" />
+      <workItem from="1712338620860" duration="15426000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -531,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712607244960</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="show goals on area details (tbc)">
+      <option name="closed" value="true" />
+      <created>1712698375642</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1712698375642</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +577,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
-    <MESSAGE value="added alive endpoint" />
     <MESSAGE value="added devise" />
     <MESSAGE value="added area model" />
     <MESSAGE value="areas continued" />
@@ -594,7 +601,8 @@
     <MESSAGE value="names of area, goal, project should be unique for user" />
     <MESSAGE value="add validation to project's dates" />
     <MESSAGE value="area - changes in css" />
-    <option name="LAST_COMMIT_MESSAGE" value="area - changes in css" />
+    <MESSAGE value="show goals on area details (tbc)" />
+    <option name="LAST_COMMIT_MESSAGE" value="show goals on area details (tbc)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
