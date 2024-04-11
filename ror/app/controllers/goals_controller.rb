@@ -42,7 +42,12 @@ class GoalsController < ApplicationController
   def update
     respond_to do |format|
       if @goal.update(goal_params)
-        format.html { redirect_to goals_url, notice: "Goal was successfully updated." }
+        Rails.logger.debug "Area ID: #{params[:area_id]}"
+        if params[:area_id].present?
+          format.html { redirect_to area_path(params[:area_id]), notice: "Goal was successfully updated." }
+        else
+          format.html { redirect_to goals_url, notice: "Goal was successfully updated." }
+        end
         format.json { render :show, status: :ok, location: @goal }
       else
         format.html { render :edit, status: :unprocessable_entity }
