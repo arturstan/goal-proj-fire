@@ -43,7 +43,11 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to projects_url, notice: "Project was successfully updated." }
+        if params[:return_area_id].present?
+          format.html { redirect_to area_path(params[:return_area_id]), notice: "Goal was successfully updated." }
+        else
+          format.html { redirect_to projects_url, notice: "Project was successfully updated." }
+        end
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit, status: :unprocessable_entity }
