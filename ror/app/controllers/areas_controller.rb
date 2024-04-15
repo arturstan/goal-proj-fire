@@ -66,6 +66,10 @@ class AreasController < ApplicationController
   def destroy
     @area.destroy!
 
+    Area.where(user_id: current_user.id)
+        .where('hierarchy > ?', @area.hierarchy)
+        .update_all('hierarchy = hierarchy - 1')
+
     respond_to do |format|
       format.html { redirect_to areas_url, notice: "Area was successfully destroyed." }
       format.json { head :no_content }
