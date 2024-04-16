@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="show goal">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="area, update hierarchy after delete">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/vendor/javascript/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/areas_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/javascript/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/javascript/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/areas/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
@@ -66,26 +67,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Rails.ror.executor&quot;: &quot;Run&quot;,
-    &quot;Ruby.areas_controller.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Rails.ror.executor": "Run",
+    "Ruby.areas_controller.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -218,7 +224,7 @@
       <workItem from="1712336993490" duration="13000" />
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
-      <workItem from="1712338620860" duration="35483000" />
+      <workItem from="1712338620860" duration="37792000" />
     </task>
     <task id="LOCAL-00001" summary="ror init project">
       <option name="closed" value="true" />
@@ -580,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713122494822</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="area, update hierarchy after delete">
+      <option name="closed" value="true" />
+      <created>1713214683738</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1713214683738</updated>
+    </task>
+    <task id="LOCAL-00047" summary="area, update hierarchy after delete">
+      <option name="closed" value="true" />
+      <created>1713214711876</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1713214711876</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +640,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
-    <MESSAGE value="added goal" />
     <MESSAGE value="area hierarchy (tbc)" />
     <MESSAGE value="area hierarchy" />
     <MESSAGE value="goal hierarchy" />
@@ -643,7 +664,8 @@
     <MESSAGE value="show area, fix back from edit goal" />
     <MESSAGE value="show area, fix back from edit project" />
     <MESSAGE value="show goal" />
-    <option name="LAST_COMMIT_MESSAGE" value="show goal" />
+    <MESSAGE value="area, update hierarchy after delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="area, update hierarchy after delete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
