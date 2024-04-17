@@ -64,6 +64,12 @@ class AreasController < ApplicationController
 
   # DELETE /areas/1 or /areas/1.json
   def destroy
+    Goal.where(user_id: current_user.id)
+        .where(area_id: @area.id)
+        .update_all(area_id: nil)
+    Project.where(user_id: current_user.id)
+           .where(area_id: @area.id)
+           .update_all(area_id: nil)
     @area.destroy!
 
     Area.where(user_id: current_user.id)
