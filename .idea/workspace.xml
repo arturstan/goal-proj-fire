@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="area, update hierarchy after delete">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="fix show goal without related to area">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/vendor/javascript/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/javascript/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/javascript/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
@@ -224,15 +226,7 @@
       <workItem from="1712336993490" duration="13000" />
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
-      <workItem from="1712338620860" duration="37792000" />
-    </task>
-    <task id="LOCAL-00001" summary="ror init project">
-      <option name="closed" value="true" />
-      <created>1709574123137</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1709574123137</updated>
+      <workItem from="1712338620860" duration="46212000" />
     </task>
     <task id="LOCAL-00002" summary="ror init project">
       <option name="closed" value="true" />
@@ -602,7 +596,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713214711876</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="area, fix delete (first used turbo)">
+      <option name="closed" value="true" />
+      <created>1713250614341</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1713250614341</updated>
+    </task>
+    <task id="LOCAL-00049" summary="area, fix delete if exist related goals/projects">
+      <option name="closed" value="true" />
+      <created>1713381527029</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1713381527029</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix show goal without related to area">
+      <option name="closed" value="true" />
+      <created>1713383001621</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1713383001621</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,9 +658,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
-    <MESSAGE value="area hierarchy (tbc)" />
-    <MESSAGE value="area hierarchy" />
-    <MESSAGE value="goal hierarchy" />
     <MESSAGE value="goal status" />
     <MESSAGE value="goal, add edit/show area" />
     <MESSAGE value="added project" />
@@ -665,7 +680,10 @@
     <MESSAGE value="show area, fix back from edit project" />
     <MESSAGE value="show goal" />
     <MESSAGE value="area, update hierarchy after delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="area, update hierarchy after delete" />
+    <MESSAGE value="area, fix delete (first used turbo)" />
+    <MESSAGE value="area, fix delete if exist related goals/projects" />
+    <MESSAGE value="fix show goal without related to area" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix show goal without related to area" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
