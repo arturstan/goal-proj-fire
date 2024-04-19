@@ -45,8 +45,11 @@ class ProjectsController < ApplicationController
       if @project.update(project_params)
         if params[:return_area_id].present?
           format.html { redirect_to area_path(params[:return_area_id]), notice: "Goal was successfully updated." }
-        else
-          format.html { redirect_to projects_url, notice: "Project was successfully updated." }
+        else if params[:return_goal_id].present?
+               format.html { redirect_to goal_path(params[:return_goal_id]), notice: "Goal was successfully updated." }
+             else
+               format.html { redirect_to projects_url, notice: "Project was successfully updated." }
+             end
         end
         format.json { render :show, status: :ok, location: @project }
       else
