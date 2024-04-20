@@ -9,8 +9,8 @@ class AreasController < ApplicationController
 
   # GET /areas/1 or /areas/1.json
   def show
-    @goals = Goal.where(user_id: current_user.id, area_id: @area.id)
-    @projects = Project.where(user_id: current_user.id, area_id: @area.id)
+    @goals = Goal.where(user_id: current_user.id, area_id: @area.id).order(:hierarchy)
+    @projects = Project.where(user_id: current_user.id, area_id: @area.id).order(:hierarchy)
   end
 
   # GET /areas/new

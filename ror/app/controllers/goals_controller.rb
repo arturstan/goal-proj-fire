@@ -10,7 +10,7 @@ class GoalsController < ApplicationController
 
   # GET /goals/1 or /goals/1.json
   def show
-    @projects = Project.where(user_id: current_user.id, goal_id: @goal.id)
+    @projects = Project.where(user_id: current_user.id, goal_id: @goal.id).order(:hierarchy)
   end
 
   # GET /goals/new
