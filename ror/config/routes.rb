@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   post "goals/:id/up" => "goals#up"
   post "goals/:id/down" => "goals#down"
+  post "goals/:id/delete_with_projects" => "goals#delete_with_projects"
 
   post "projects/:id/up" => "projects#up"
   post "projects/:id/down" => "projects#down"

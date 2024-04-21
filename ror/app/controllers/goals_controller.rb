@@ -58,7 +58,30 @@ class GoalsController < ApplicationController
 
   # DELETE /goals/1 or /goals/1.json
   def destroy
+    Project.where(user_id: current_user.id)
+           .where(goal_id: @goal.id)
+           .update_all(goal_id: nil)
     @goal.destroy!
+
+    Goal.where(user_id: current_user.id)
+        .where('hierarchy > ?', @area.hierarchy)
+        .update_all('hierarchy = hierarchy - 1')
+
+    respond_to do |format|
+      format.html { redirect_to goals_url, notice: "Goal was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+  def delete_with_projects
+    Project.where(user_id: current_user.id)
+           .where(goal_id: @goal.id)
+           .delete_all
+    @goal.destroy!
+
+    Goal.where(user_id: current_user.id)
+        .where('hierarchy > ?', @area.hierarchy)
+        .update_all('hierarchy = hierarchy - 1')
 
     respond_to do |format|
       format.html { redirect_to goals_url, notice: "Goal was successfully destroyed." }
