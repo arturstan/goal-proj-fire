@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-  before_action :set_goal, only: %i[ show edit update destroy ]
+  before_action :set_goal, only: %i[ show edit update destroy delete_with_projects ]
   before_action :set_areas, only: %i[ new edit create update ]
   before_action :authenticate_user!
 
@@ -64,7 +64,7 @@ class GoalsController < ApplicationController
     @goal.destroy!
 
     Goal.where(user_id: current_user.id)
-        .where('hierarchy > ?', @area.hierarchy)
+        .where('hierarchy > ?', @goal.hierarchy)
         .update_all('hierarchy = hierarchy - 1')
 
     respond_to do |format|
@@ -80,7 +80,7 @@ class GoalsController < ApplicationController
     @goal.destroy!
 
     Goal.where(user_id: current_user.id)
-        .where('hierarchy > ?', @area.hierarchy)
+        .where('hierarchy > ?', @goal.hierarchy)
         .update_all('hierarchy = hierarchy - 1')
 
     respond_to do |format|

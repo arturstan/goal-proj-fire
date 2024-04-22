@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="add order to show goals and projects">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="Delete goal and projects (tbc)">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
@@ -15,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/goals/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,15 +224,7 @@
       <workItem from="1712336993490" duration="13000" />
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
-      <workItem from="1712338620860" duration="52574000" />
-    </task>
-    <task id="LOCAL-00005" summary="added devise">
-      <option name="closed" value="true" />
-      <created>1709827252203</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1709827252203</updated>
+      <workItem from="1712338620860" duration="54016000" />
     </task>
     <task id="LOCAL-00006" summary="added devise">
       <option name="closed" value="true" />
@@ -619,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713616441621</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Delete goal and projects (tbc)">
+      <option name="closed" value="true" />
+      <created>1713734683438</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1713734683438</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +656,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
-    <MESSAGE value="projects (tbc)" />
     <MESSAGE value="add tailwind" />
     <MESSAGE value="tailwind, first use" />
     <MESSAGE value="tailwind (next view)" />
@@ -682,7 +680,8 @@
     <MESSAGE value="project show" />
     <MESSAGE value="fix back from edit project" />
     <MESSAGE value="add order to show goals and projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="add order to show goals and projects" />
+    <MESSAGE value="Delete goal and projects (tbc)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete goal and projects (tbc)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
