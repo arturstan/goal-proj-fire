@@ -7,7 +7,7 @@
 <div id="buttons" class="justify-center" style="display: flex; justify-content: center;">
   <p class="py-2.5">
     <%= link_to "Edit", edit_area_path(@area), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
-    <%= link_to "Delete", area_path(@area), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+    <%= link_to "Delete area", area_path(@area), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
     <%= link_to "Back to areas", areas_path, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
   </p>
 </div>
