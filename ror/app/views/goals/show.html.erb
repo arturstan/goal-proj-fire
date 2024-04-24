@@ -4,13 +4,13 @@
 
 <div>
   <p>
-    Status: <%=h @goal.status %>
+    Status: <%= @goal.status %>
   </p>
   <p>
-    Area: <%=h @goal.area&.name %>
+    Area: <%= link_to @goal.area&.name, area_path(@goal.area) if @goal.area.present? %>
   </p>
   <p>
-    Description: <%=h @goal.description %>
+    Description: <%= @goal.description %>
   </p>
 </div>
 
