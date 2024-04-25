@@ -10,10 +10,10 @@
     Status: <%=h @project.status %>
   </p>
   <p>
-    Area: <%=h @project.area&.name %>
+    Area: <%= link_to @project.area&.name, area_path(@project.area), style: "text-decoration-line: underline;" if @project.area.present? %>
   </p>
   <p>
-    Goal: <%=h @project.goal&.name %>
+    Goal: <%= link_to @project.goal&.name, goal_path(@project.goal), style: "text-decoration-line: underline;" if @project.goal.present? %>
   </p>
   <p>
     Description: <%=h @project.description %>

@@ -7,7 +7,7 @@
     Status: <%= @goal.status %>
   </p>
   <p>
-    Area: <%= link_to @goal.area&.name, area_path(@goal.area) if @goal.area.present? %>
+    Area: <%= link_to @goal.area&.name, area_path(@goal.area), style: "text-decoration-line: underline;" if @goal.area.present? %>
   </p>
   <p>
     Description: <%= @goal.description %>
