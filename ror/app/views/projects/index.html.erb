@@ -22,8 +22,8 @@
           <%= link_to project.name, project_path(project), style: "text-decoration-line: underline;"  %>
         </th>
         <th class="text-left px-2"><%= project.description.slice(0, 20) %></th>
-        <th class="text-left px-2"><%= project.goal.name if project.goal %></th>
-        <th class="text-left px-2"><%= project.area.name if project.area %></th>
+        <th class="text-left px-2"><%= link_to project.goal.name, goal_path(project.goal), style: "text-decoration-line: underline;" if project.goal %></th>
+        <th class="text-left px-2"><%= link_to project.area.name, area_path(project.area), style: "text-decoration-line: underline;" if project.area %></th>
         <th class="flex items-center space-x-2">
           <%= link_to "Edit", edit_project_path(project), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
           <% if project.hierarchy > 1 %>
