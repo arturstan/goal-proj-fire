@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="add link from goal/project index">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="back from goal to goals or area">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/vendor/javascript/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ror.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ror.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/areas/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/views/goals/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/goals/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
@@ -67,31 +68,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Rails.ror.executor": "Run",
-    "Ruby.areas_controller.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Rails.ror.executor&quot;: &quot;Run&quot;,
+    &quot;Ruby.areas_controller.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -99,12 +100,12 @@
   </component>
   <component name="RunManager" selected="Rails.ror">
     <configuration name="ror" type="RailsRunConfigurationType" factoryName="Rails">
-      <module name="goal-proj-fire" />
+      <module name="ror" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../ror" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="rbenv: 3.3.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
@@ -117,7 +118,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method v="2" />
@@ -203,6 +204,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-RM-241.15989.113" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -224,15 +232,8 @@
       <workItem from="1712336993490" duration="13000" />
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
-      <workItem from="1712338620860" duration="60698000" />
-    </task>
-    <task id="LOCAL-00011" summary="areas continued">
-      <option name="closed" value="true" />
-      <created>1710281472905</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1710281472905</updated>
+      <workItem from="1712338620860" duration="62123000" />
+      <workItem from="1714323059784" duration="1958000" />
     </task>
     <task id="LOCAL-00012" summary="areas continued">
       <option name="closed" value="true" />
@@ -618,7 +619,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714158995009</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="back from goal to goals or area">
+      <option name="closed" value="true" />
+      <created>1714240961327</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1714240961327</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +665,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
-    <MESSAGE value="goal view (tbc)" />
     <MESSAGE value="names of area, goal, project are required" />
     <MESSAGE value="fix log in" />
     <MESSAGE value="names of area, goal, project should be unique for user" />
@@ -681,7 +689,8 @@
     <MESSAGE value="link from goal show to area" />
     <MESSAGE value="link from project show to area and goal" />
     <MESSAGE value="add link from goal/project index" />
-    <option name="LAST_COMMIT_MESSAGE" value="add link from goal/project index" />
+    <MESSAGE value="back from goal to goals or area" />
+    <option name="LAST_COMMIT_MESSAGE" value="back from goal to goals or area" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -691,7 +700,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1712244798283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710888394756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1714323171207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>
