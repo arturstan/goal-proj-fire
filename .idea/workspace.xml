@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="back from goal to goals or area">
+    <list default="true" id="7e18479f-668f-48c7-820d-b584606b6ef0" name="Changes" comment="set default area when create gaol or project">
       <change afterPath="$PROJECT_DIR$/ror/app/assets/builds/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ror/db/migrate/20240429173125_create_projects_tags_join_table.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/vendor/javascript/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/ror.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ror.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/goals_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/models/project.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/models/project.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/models/tag.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/models/tag.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/areas/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
@@ -233,15 +234,7 @@
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
       <workItem from="1712338620860" duration="62123000" />
-      <workItem from="1714323059784" duration="1958000" />
-    </task>
-    <task id="LOCAL-00012" summary="areas continued">
-      <option name="closed" value="true" />
-      <created>1710368088660</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1710368088660</updated>
+      <workItem from="1714323059784" duration="3527000" />
     </task>
     <task id="LOCAL-00013" summary="added tag">
       <option name="closed" value="true" />
@@ -627,7 +620,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714240961327</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="set default area when create gaol or project">
+      <option name="closed" value="true" />
+      <created>1714325733757</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1714325733757</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +666,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ror" />
     </ignored-roots>
-    <MESSAGE value="names of area, goal, project are required" />
     <MESSAGE value="fix log in" />
     <MESSAGE value="names of area, goal, project should be unique for user" />
     <MESSAGE value="add validation to project's dates" />
@@ -690,7 +690,8 @@
     <MESSAGE value="link from project show to area and goal" />
     <MESSAGE value="add link from goal/project index" />
     <MESSAGE value="back from goal to goals or area" />
-    <option name="LAST_COMMIT_MESSAGE" value="back from goal to goals or area" />
+    <MESSAGE value="set default area when create gaol or project" />
+    <option name="LAST_COMMIT_MESSAGE" value="set default area when create gaol or project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -701,6 +702,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710888394756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1714323171207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1714411478642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>

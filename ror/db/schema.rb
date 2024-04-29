@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_24_211624) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_29_173125) do
   create_table "areas", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "name"
@@ -50,6 +50,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_24_211624) do
     t.index ["area_id"], name: "index_projects_on_area_id"
     t.index ["goal_id"], name: "index_projects_on_goal_id"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "projects_tags", id: false, force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "tag_id", null: false
   end
 
   create_table "tags", force: :cascade do |t|

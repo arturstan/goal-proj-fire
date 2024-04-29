@@ -16,6 +16,9 @@
 <%= form_for @area do |f| %>
   <p>
     <%= f.label :name %><br />
+    <% @area.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
     <%= f.text_field :name %>
   </p>
 
