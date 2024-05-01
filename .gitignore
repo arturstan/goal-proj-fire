@@ -33,3 +33,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /ror/config/master.key
+/ror/tmp/

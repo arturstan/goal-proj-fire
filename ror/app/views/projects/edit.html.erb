@@ -55,6 +55,14 @@
     <%= f.date_field :due_date %>
   </p>
 
+    <p>
+      <%= f.label :Tags %><br />
+      <select id="tag_ids" multiple="multiple">
+        <%= options_for_select(@tags, @project.tags.collect {|t| t.id }) %>
+      </select>
+      <%= f.collection_select :tag_ids, @tags, :id, :name, {}, { multiple: true, class: "form-control" } %>
+    </p>
+
     <%= hidden_field_tag :return_area_id, params[:return_area_id] %>
     <%= hidden_field_tag :return_goal_id, params[:return_goal_id] %>
     <p class="py-2.5">

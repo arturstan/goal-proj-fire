@@ -19,11 +19,15 @@ class ProjectsController < ApplicationController
     if area_default = Area.where(user_id: current_user.id, isDefault: true).first
       @project.area_id = area_default.id
     end
-
+    @tags = {}
+    Tag.where(user_id: current_user.id).collect {|tag| @tags[tag.name] = tag.id }
+    @project.tags.build
   end
 
   # GET /projects/1/edit
   def edit
+    @tags = {}
+    Tag.where(user_id: current_user.id).order(name: :asc).collect {|tag| [@tags[tag.name], tag.id] }
   end
 
   # POST /projects or /projects.json
@@ -47,6 +51,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
+        handle_tags_project
         if params[:return_area_id].present?
           format.html { redirect_to area_path(params[:return_area_id]), notice: "Goal was successfully updated." }
         else if params[:return_goal_id].present?
@@ -115,6 +120,14 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def handle_tags_project
+    if params['tag_ids']
+      @project.tags.clear
+      tags = params['tag_ids'].map { |id| Tags.find(id) }
+      @project.tags << tags
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
@@ -138,6 +151,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:area_id, :goal_id, :name, :description, :hierarchy, :status, :start_date, :due_date, :star)
+      params.require(:project).permit(:area_id, :goal_id, :name, :description, :hierarchy, :status, :start_date, :due_date, :star, tags_id: [])
     end
 end
