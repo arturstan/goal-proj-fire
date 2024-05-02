@@ -9,6 +9,11 @@
       <change afterPath="$PROJECT_DIR$/ror/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/tmp/local_secret.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ror/vendor/javascript/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/controllers/projects_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ror/app/views/projects/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/ror/app/views/projects/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/config/credentials.yml.enc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ror/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/ror/log/development.log" afterDir="false" />
     </list>
@@ -112,7 +117,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method v="2" />
@@ -227,15 +232,7 @@
       <workItem from="1712337149512" duration="820000" />
       <workItem from="1712338012842" duration="602000" />
       <workItem from="1712338620860" duration="62123000" />
-      <workItem from="1714323059784" duration="11873000" />
-    </task>
-    <task id="LOCAL-00016" summary="area hierarchy (tbc)">
-      <option name="closed" value="true" />
-      <created>1710709803874</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1710709803874</updated>
+      <workItem from="1714323059784" duration="15752000" />
     </task>
     <task id="LOCAL-00017" summary="area hierarchy (tbc)">
       <option name="closed" value="true" />
@@ -621,7 +618,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714593171411</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="add tags to projects on views (tbc)">
+      <option name="closed" value="true" />
+      <created>1714593216543</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1714593216543</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,6 +693,16 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/ror/app/controllers/projects_controller.rb</url>
+          <line>121</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="ruby-exception" />
       </default-breakpoints>
@@ -695,6 +710,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/goal_proj_fire@areas_controller.rcov" NAME="areas_controller Coverage Results" MODIFIED="1710888394756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
-    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1714592669160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
+    <SUITE FILE_PATH="coverage/goal_proj_fire@ror.rcov" NAME="ror Coverage Results" MODIFIED="1714674516304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ror" MODULE_NAME="ror" />
   </component>
 </project>

@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
   before_action :set_areas, only: %i[ new edit create update ]
   before_action :set_goals, only: %i[ new edit create update ]
+  before_action :set_tags, only: %i[ new edit create update ]
   before_action :authenticate_user!
 
   # GET /projects or /projects.json
@@ -19,15 +20,11 @@ class ProjectsController < ApplicationController
     if area_default = Area.where(user_id: current_user.id, isDefault: true).first
       @project.area_id = area_default.id
     end
-    @tags = {}
-    Tag.where(user_id: current_user.id).collect {|tag| @tags[tag.name] = tag.id }
-    @project.tags.build
+    # @project.tags.build
   end
 
   # GET /projects/1/edit
   def edit
-    @tags = {}
-    Tag.where(user_id: current_user.id).order(name: :asc).collect {|tag| [@tags[tag.name], tag.id] }
   end
 
   # POST /projects or /projects.json
@@ -38,6 +35,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
+        handle_tags_project
         format.html { redirect_to projects_url, notice: "Project was successfully created." }
         format.json { render :show, status: :created, location: @project }
       else
@@ -121,9 +119,9 @@ class ProjectsController < ApplicationController
   end
 
   def handle_tags_project
-    if params['tag_ids']
+    if params[:tag_ids]
       @project.tags.clear
-      tags = params['tag_ids'].map { |id| Tags.find(id) }
+      tags = params[:tag_ids].map { |id| Tags.find(id) }
       @project.tags << tags
     end
   end
@@ -149,8 +147,12 @@ class ProjectsController < ApplicationController
             .map { |goal | [goal.name, goal.id] }
     end
 
+  def set_tags
+    @tags = Tag.where(user_id: current_user.id).order(name: :asc)
+  end
+
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:area_id, :goal_id, :name, :description, :hierarchy, :status, :start_date, :due_date, :star, tags_id: [])
+      params.require(:project).permit(:area_id, :goal_id, :name, :description, :hierarchy, :status, :start_date, :due_date, :star, tag_ids: [])
     end
 end

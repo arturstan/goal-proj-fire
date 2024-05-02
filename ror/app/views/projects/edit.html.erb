@@ -57,10 +57,7 @@
 
     <p>
       <%= f.label :Tags %><br />
-      <select id="tag_ids" multiple="multiple">
-        <%= options_for_select(@tags, @project.tags.collect {|t| t.id }) %>
-      </select>
-      <%= f.collection_select :tag_ids, @tags, :id, :name, {}, { multiple: true, class: "form-control" } %>
+      <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
     </p>
 
     <%= hidden_field_tag :return_area_id, params[:return_area_id] %>
