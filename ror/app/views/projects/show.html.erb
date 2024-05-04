@@ -24,8 +24,13 @@
   <p>
     Due date: <%=h @project.due_date %>
   </p>
+  <p>
+    Tags:
+    <% @project.tags.each do |tag| %>
+      <%= tag.name %>
+    <% end %>
+  </p>
 </div>
-
 
 <div id="buttons" class="justify-center" style="display: flex; justify-content: center;">
   <p class="py-2.5">
