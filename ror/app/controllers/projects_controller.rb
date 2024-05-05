@@ -70,6 +70,10 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy!
 
+    Project.where(user_id: current_user.id)
+        .where('hierarchy > ?', @project.hierarchy)
+        .update_all('hierarchy = hierarchy - 1')
+
     respond_to do |format|
       format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
       format.json { head :no_content }
@@ -92,8 +96,8 @@ class ProjectsController < ApplicationController
         .update(hierarchy: h_old)
 
     respond_to do |format|
-      format.html { redirect_to goals_url }
-      format.json { render goals_url, status: :ok }
+      format.html { redirect_to projects_url }
+      format.json { render projects_url, status: :ok }
     end
   end
 
@@ -113,8 +117,8 @@ class ProjectsController < ApplicationController
         .where.not(id: id)
         .update(hierarchy: h_old)
     respond_to do |format|
-      format.html { redirect_to goals_url }
-      format.json { render goals_url, status: :ok }
+      format.html { redirect_to projects_url }
+      format.json { render projects_url, status: :ok }
     end
   end
 
