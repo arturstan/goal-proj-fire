@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
-    if area_default = Area.where(user_id: current_user.id, isDefault: true).first
+    if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
       @project.area_id = area_default.id
     end
     # @project.tags.build

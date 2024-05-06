@@ -78,4 +78,5 @@ name
 FK user
 
 ### Functionality
-simple overview (yearly, monthly, weekly), check goal which overview, add summaries, view achievement from last review
+- simple overview, retrospection (yearly, monthly, weekly), check goal which overview, add summaries, view achievement from last review
+- comments (for goals, projects, tasks)
