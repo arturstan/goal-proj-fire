@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: %i[ show edit update destroy delete_with_projects ]
   before_action :set_areas, only: %i[ new edit create update ]
+  before_action :set_goal_statuses, only: %i[ index ]
   before_action :authenticate_user!
 
   # GET /goals or /goals.json
@@ -148,6 +149,15 @@ class GoalsController < ApplicationController
         Area.where(user_id: current_user.id).order(:hierarchy)
             .map { |area| [area.name, area.id] }
     end
+
+  def set_goal_statuses
+    @goal_statuses = [['all', nil]] +
+      [['active', :active]] +
+      [['important', :important]] +
+      [['suspended', :suspended]] +
+      [['someday', :someday]] +
+      [['archived', :archived]]
+  end
 
     # Only allow a list of trusted parameters through.
     def goal_params

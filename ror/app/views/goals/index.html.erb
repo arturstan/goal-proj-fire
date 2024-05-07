@@ -1,5 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
+<p>
+  <%= select_tag("goal_statuses", options_from_collection_for_select(@goal_statuses, 'id', 'name'), multiple:true, include_blank:"(all categories)") %>
+  </p>
+
+
 <h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Goals</h1>
 
 <% max_hierarchy = @goals.maximum(:hierarchy) %>
