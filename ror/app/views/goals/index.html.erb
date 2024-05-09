@@ -1,10 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<%= options_for_select(@goal_statuses) %>
-
-<p>
-  <%= select_tag("goal_statuses", options_from_collection_for_select(@goal_statuses, 'id', 'name'), multiple:true, include_blank:"(all categories)") %>
-</p>
+<% if @goals.any? %>
+  <%= form_for @goals[0] do |f| %>
+    <p>
+      <%= f.label :status %>
+      <%= f.select :status, @goal_statuses %>
+    </p>
+  <% end %>
+<% end %>
 
 
 <h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Goals</h1>

@@ -151,14 +151,12 @@ class GoalsController < ApplicationController
     end
 
   def set_goal_statuses
-    objects = [
-      {id: :active, name: 'active'},
-      {id: :important, name: 'important'},
-      {id: :suspended, name: 'suspended'},
-      {id: :someday, name: 'someday'},
-      {id: :archived, name: 'archived'}
-    ]
-    @goal_statuses = objects.map do |obj| [obj[:id], obj[:name]] end
+    @goal_statuses = [['all', nil]] +
+      [['active', :active]] +
+      [['important', :important]] +
+      [['suspended', :suspended]] +
+      [['someday', :someday]] +
+      [['archived', :archived]]
   end
 
     # Only allow a list of trusted parameters through.
