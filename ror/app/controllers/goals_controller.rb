@@ -6,7 +6,12 @@ class GoalsController < ApplicationController
 
   # GET /goals or /goals.json
   def index
-    @goals = Goal.where(user_id: current_user.id).order(:hierarchy)
+    if params[:status].present?
+      @goals = Goal.where(user_id: current_user.id).where(status: params[:status]).order(:hierarchy)
+      @status = params[:status]
+    else
+      @goals = Goal.where(user_id: current_user.id).order(:hierarchy)
+    end
   end
 
   # GET /goals/1 or /goals/1.json

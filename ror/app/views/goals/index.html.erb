@@ -1,13 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<% if @goals.any? %>
-  <%= form_for @goals[0] do |f| %>
-    <p>
-      <%= f.label :status %>
-      <%= f.select :status, @goal_statuses %>
-    </p>
+  Search by:<br>
+  <%= form_tag goals_path, method: 'get' do %>
+    <%= select_tag :status, options_for_select(@goal_statuses, @status) %>
+    <%= submit_tag 'Search', class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-small rounded-lg text-sm px-3 py-2.5 text-center me-1 mb-1" %>
   <% end %>
-<% end %>
 
 
 <h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Goals</h1>
