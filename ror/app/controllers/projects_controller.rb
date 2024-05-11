@@ -3,11 +3,17 @@ class ProjectsController < ApplicationController
   before_action :set_areas, only: %i[ new edit create update ]
   before_action :set_goals, only: %i[ new edit create update ]
   before_action :set_tags, only: %i[ new edit create update ]
+  before_action :set_project_statuses, only: %i[ index ]
   before_action :authenticate_user!
 
   # GET /projects or /projects.json
   def index
-    @projects = Project.where(user_id: current_user.id).order(:hierarchy)
+    if params[:status].present?
+      @projects = Project.where(user_id: current_user.id).where(status: params[:status]).order(:hierarchy)
+      @status = params[:status]
+    else
+      @projects = Project.where(user_id: current_user.id).order(:hierarchy)
+    end
   end
 
   # GET /projects/1 or /projects/1.json
@@ -153,6 +159,15 @@ class ProjectsController < ApplicationController
 
   def set_tags
     @tags = Tag.where(user_id: current_user.id).order(name: :asc)
+  end
+
+  def set_project_statuses
+    @project_statuses = [['all', nil]] +
+      [['active', :active]] +
+      [['suspended', :suspended]] +
+      [['scheduled', :scheduled]] +
+      [['someday', :someday]] +
+      [['archived', :archived]]
   end
 
     # Only allow a list of trusted parameters through.
