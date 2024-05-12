@@ -77,6 +77,13 @@ FK project (null ??? - what about standalone task)
 name
 FK user
 
+### GoalComment / ProjectComment / TaskComment
+Text
+FK comment (null)
+FK user
+FK goal / FK project / FK task
+
+
 ### Functionality
 - simple overview, retrospection (yearly, monthly, weekly), check goal which overview, add summaries, view achievement from last review
 - comments (for goals, projects, tasks)
