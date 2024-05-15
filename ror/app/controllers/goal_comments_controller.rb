@@ -24,10 +24,11 @@ class GoalCommentsController < ApplicationController
   def create
     @goal_comment = GoalComment.new(goal_comment_params)
     @goal_comment.user_id = current_user.id
+    @goal_comment.goal_id = params[:goal_id]
 
     respond_to do |format|
       if @goal_comment.save
-        format.html { redirect_to goal_comment_url(@goal_comment), notice: "Goal comment was successfully created." }
+        format.html { redirect_to goal_url(id: params[:goal_id]), notice: "Goal comment was successfully created." }
         format.json { render :show, status: :created, location: @goal_comment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +41,7 @@ class GoalCommentsController < ApplicationController
   def update
     respond_to do |format|
       if @goal_comment.update(goal_comment_params)
-        format.html { redirect_to goal_comment_url(@goal_comment), notice: "Goal comment was successfully updated." }
+        format.html { redirect_to goal_path(id: @goal_comment.goal_id), notice: "Goal comment was successfully updated." }
         format.json { render :show, status: :ok, location: @goal_comment }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +55,7 @@ class GoalCommentsController < ApplicationController
     @goal_comment.destroy!
 
     respond_to do |format|
-      format.html { redirect_to goal_comments_url, notice: "Goal comment was successfully destroyed." }
+      format.html { redirect_to goal_url(params[:goal_id]), notice: "Goal comment was successfully destroyed." }
       format.json { head :no_content }
     end
   end
