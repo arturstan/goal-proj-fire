@@ -3,6 +3,5 @@
 
   <%= render "form", goal_comment: @goal_comment %>
 
-  <%= link_to "Show this goal comment", @goal_comment, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  <%= link_to "Back to goal comments", goal_comments_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%= link_to "Back to goal", goal_path(@goal_comment.goal_id), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 </div>
