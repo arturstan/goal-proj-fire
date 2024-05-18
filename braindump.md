@@ -79,7 +79,7 @@ FK user
 
 ### GoalComment / ProjectComment / TaskComment
 Text
-FK comment (null)
+FK references (null)
 FK user
 FK goal / FK project / FK task
 

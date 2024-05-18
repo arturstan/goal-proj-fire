@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_12_191527) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_18_203923) do
   create_table "areas", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "name"
@@ -42,6 +42,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_12_191527) do
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_goals_on_area_id"
     t.index ["user_id"], name: "index_goals_on_user_id"
+  end
+
+  create_table "project_comments", force: :cascade do |t|
+    t.text "comment"
+    t.integer "project_id_id", null: false
+    t.integer "user_id_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id_id"], name: "index_project_comments_on_project_id_id"
+    t.index ["user_id_id"], name: "index_project_comments_on_user_id_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -92,6 +102,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_12_191527) do
   add_foreign_key "goal_comments", "users"
   add_foreign_key "goals", "areas"
   add_foreign_key "goals", "users"
+  add_foreign_key "project_comments", "project_ids"
+  add_foreign_key "project_comments", "user_ids"
   add_foreign_key "projects", "areas"
   add_foreign_key "projects", "goals"
   add_foreign_key "projects", "users"
