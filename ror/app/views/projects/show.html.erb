@@ -39,3 +39,17 @@
     <%= link_to "Back to projects", projects_path, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
   </p>
 </div>
+
+<div>
+  <h1 class="text-2xl font-bold justify-center py-4" style="display: flex; justify-content: center;">Comments</h1>
+  <% if @project.project_comments.any? %>
+    <% @project.project_comments.each do |comm| %>
+      <p><%= comm.comment.gsub("\n", '<br>').html_safe %></p>
+      <%= link_to "Edit", edit_project_comment_path(comm), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+      <%= link_to "Delete", project_comment_path(comm), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+    <% end %>
+  <% end %>
+  <p>
+    <%= link_to "Add comment", new_project_comment_path(project_id: @project.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+  </p>
+</div>
