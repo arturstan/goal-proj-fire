@@ -55,7 +55,7 @@ class ProjectCommentsController < ApplicationController
     @project_comment.destroy!
 
     respond_to do |format|
-      format.html { redirect_to project_url(params[:project_id]), notice: "Project comment was successfully destroyed." }
+      format.html { redirect_to project_url(@project_comment.project_id), notice: "Project comment was successfully destroyed." }
       format.json { head :no_content }
     end
   end

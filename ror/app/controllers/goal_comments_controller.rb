@@ -55,7 +55,7 @@ class GoalCommentsController < ApplicationController
     @goal_comment.destroy!
 
     respond_to do |format|
-      format.html { redirect_to goal_url(params[:goal_id]), notice: "Goal comment was successfully destroyed." }
+      format.html { redirect_to goal_url(@goal_comment.goal_id), notice: "Goal comment was successfully destroyed." }
       format.json { head :no_content }
     end
   end
