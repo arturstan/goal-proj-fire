@@ -4,7 +4,7 @@
 
 <div>
   <p>
-    Star: <%=h @project.star %>
+    Star: <%= check_box_tag 'read_only_status', '1', @project.star, disabled: true %>
   </p>
   <p>
     Status: <%=h @project.status %>
