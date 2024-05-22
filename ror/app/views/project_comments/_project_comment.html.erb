@@ -1,0 +1,13 @@
+<div id="<%= dom_id project_comment %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comment:</strong>
+    <%= project_comment.comment %>
+  </p>
+
+  <%= hidden_field_tag :project_id, params[:project§_id] %>
+
+  <% if action_name != "show" %>
+    <%= link_to "Edit this project comment", edit_project_comment_path(project_comment), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -3,6 +3,7 @@
 Search by:<br>
 <%= form_tag projects_path, method: 'get' do %>
   <%= select_tag :status, options_for_select(@project_statuses, @status) %>
+  <%= select_tag :star, options_for_select(@project_stars, @star) %>
   <%= submit_tag 'Search', class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-small rounded-lg text-sm px-3 py-2.5 text-center me-1 mb-1" %>
 <% end %>
 

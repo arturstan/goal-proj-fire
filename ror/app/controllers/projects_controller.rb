@@ -4,16 +4,19 @@ class ProjectsController < ApplicationController
   before_action :set_goals, only: %i[ new edit create update ]
   before_action :set_tags, only: %i[ new edit create update ]
   before_action :set_project_statuses, only: %i[ index ]
+  before_action :set_project_stars, only: %i[ index ]
   before_action :authenticate_user!
 
   # GET /projects or /projects.json
   def index
-    if params[:status].present?
-      @projects = Project.where(user_id: current_user.id).where(status: params[:status]).order(:hierarchy)
-      @status = params[:status]
-    else
-      @projects = Project.where(user_id: current_user.id).order(:hierarchy)
-    end
+    @projects = Project.where(user_id: current_user.id)
+    @projects = @projects.where(status: params[:status]) if params[:status].present?
+    @projects = @projects.where(star: params[:star]) if params[:star].present?
+    @projects.order(:hierarchy)
+
+    @status = params[:status] if params[:status].present?
+    @star = params[:star] if params[:star].present?
+
   end
 
   # GET /projects/1 or /projects/1.json
@@ -170,6 +173,11 @@ class ProjectsController < ApplicationController
       [['archived', :archived]]
   end
 
+  def set_project_stars
+    @project_stars = [['all', nil]] +
+      [['star', true]] +
+      [['no star', false]]
+  end
     # Only allow a list of trusted parameters through.
     def project_params
       params.require(:project).permit(:area_id, :goal_id, :name, :description, :hierarchy, :status, :start_date, :due_date, :star, tag_ids: [])
