@@ -53,7 +53,7 @@ Status:
 Star (bool)
 Start Date
 Due Date
-Due (enum) ???
+Energy (enum)
 Time (enum)
   - 5m
   - 10m
