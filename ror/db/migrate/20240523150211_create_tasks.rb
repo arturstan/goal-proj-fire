@@ -9,6 +9,7 @@ class CreateTasks < ActiveRecord::Migration[7.1]
       t.date :due_date
       t.integer :energy
       t.integer :time
+      t.integer :hierarchy
       t.references :user, null: false, foreign_key: true
       t.references :area, null: false, foreign_key: true
       t.references :project, null: false, foreign_key: true

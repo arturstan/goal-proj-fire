@@ -69,6 +69,7 @@ Time (enum)
   - 5h
   - 6h
   - 8h
+Hierarchy
 FK user
 FK area
 FK project (null ??? - what about standalone task)

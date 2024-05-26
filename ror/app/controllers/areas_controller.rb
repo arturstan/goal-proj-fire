@@ -11,6 +11,7 @@ class AreasController < ApplicationController
   def show
     @goals = Goal.where(user_id: current_user.id, area_id: @area.id).order(:hierarchy)
     @projects = Project.where(user_id: current_user.id, area_id: @area.id).order(:hierarchy)
+    @tasks = Task.where(user_id: current_user.id, area_id: @area.id).order(:hierarchy)
   end
 
   # GET /areas/new

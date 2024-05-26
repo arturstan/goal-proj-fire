@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_18_203923) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_23_150211) do
   create_table "areas", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "name"
@@ -85,6 +85,26 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_18_203923) do
     t.index ["user_id"], name: "index_tags_on_user_id"
   end
 
+  create_table "tasks", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "status"
+    t.boolean "star"
+    t.date "start_date"
+    t.date "due_date"
+    t.integer "energy"
+    t.integer "time"
+    t.integer "hierarchy"
+    t.integer "user_id", null: false
+    t.integer "area_id", null: false
+    t.integer "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_tasks_on_area_id"
+    t.index ["project_id"], name: "index_tasks_on_project_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -108,4 +128,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_18_203923) do
   add_foreign_key "projects", "goals"
   add_foreign_key "projects", "users"
   add_foreign_key "tags", "users"
+  add_foreign_key "tasks", "areas"
+  add_foreign_key "tasks", "projects"
+  add_foreign_key "tasks", "users"
 end
