@@ -83,6 +83,8 @@ class ProjectsController < ApplicationController
         .where('hierarchy > ?', @project.hierarchy)
         .update_all('hierarchy = hierarchy - 1')
 
+    Task.where('project_id = (?)', @project.id).delete_all()
+
     respond_to do |format|
       format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
       format.json { head :no_content }

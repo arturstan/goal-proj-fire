@@ -3,7 +3,9 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.where(user_id: current_user.id)
+    # todo filter
+    @tasks.order(:hierarchy)
   end
 
   # GET /tasks/1 or /tasks/1.json
@@ -13,6 +15,9 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
+      @task.area_id = area_default.id
+    end
   end
 
   # GET /tasks/1/edit
@@ -22,6 +27,8 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = Task.new(task_params)
+    @task.user_id = current_user.id
+    @task.hierarchy = Task.where(user_id: current_user.id).maximum(:hierarchy).to_i + 1
 
     respond_to do |format|
       if @task.save

@@ -4,6 +4,7 @@ class Project < ApplicationRecord
   belongs_to :area, optional:true
   belongs_to :goal, optional:true
   has_many :project_comments
+  has_many :tasks
   validates :name, presence: { message: "Name is required" }
   validates :name, uniqueness: { scope: :user_id, message: "You already have an area with this name" }
   validate :start_date_after_now

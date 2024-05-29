@@ -53,3 +53,16 @@
     <%= link_to "Add comment", new_project_comment_path(project_id: @project.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
   </p>
 </div>
+
+<div>
+  <h1 class="text-2xl font-bold justify-center py-4" style="display: flex; justify-content: center;">Tasks</h1>
+  <% if @project.tasks.any? %>
+    <% @project.tasks.each do |task| %>
+
+    <% end %>
+  <% end %>
+  <p>
+    <%= link_to "Add task", new_task_path(project_id: @project.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+  </p>
+
+</div>
