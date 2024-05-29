@@ -1,5 +1,7 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_areas, only: %i[ new edit create update ]
+  before_action :set_projects, only: %i[ new edit create update ]
 
   # GET /tasks or /tasks.json
   def index
@@ -15,8 +17,17 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
-    if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
-      @task.area_id = area_default.id
+    if params[:project_id].present?
+      @task.area_id = params[:area_id]
+      @task.project_id = params[:project_id]
+    else
+      if params[:area_id].present?
+        @task.area_id = params[:area_id]
+      else
+        if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
+          @task.area_id = area_default.id
+        end
+      end
     end
   end
 
@@ -69,6 +80,18 @@ class TasksController < ApplicationController
     def set_task
       @task = Task.find(params[:id])
     end
+
+  def set_areas
+    @areas = [['', nil]] +
+      Area.where(user_id: current_user.id).order(:hierarchy)
+          .map { |area| [area.name, area.id] }
+  end
+
+  def set_projects
+    @projects = [['', nil]] +
+      Project.where(user_id: current_user.id).order(:hierarchy)
+          .map { |proj| [proj.name, proj.id] }
+  end
 
     # Only allow a list of trusted parameters through.
     def task_params
