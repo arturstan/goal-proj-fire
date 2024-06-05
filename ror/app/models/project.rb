@@ -6,7 +6,7 @@ class Project < ApplicationRecord
   has_many :project_comments
   has_many :tasks
   validates :name, presence: { message: "Name is required" }
-  validates :name, uniqueness: { scope: :user_id, message: "You already have an area with this name" }
+  validates :name, uniqueness: { scope: :user_id, message: "You already have a project with this name" }
   validate :start_date_after_now
   validate :due_date_after_start_date
   has_and_belongs_to_many :tags
