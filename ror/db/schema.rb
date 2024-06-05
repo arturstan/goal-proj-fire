@@ -96,8 +96,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_23_150211) do
     t.integer "time"
     t.integer "hierarchy"
     t.integer "user_id", null: false
-    t.integer "area_id", null: false
-    t.integer "project_id", null: false
+    t.integer "area_id"
+    t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_tasks_on_area_id"
