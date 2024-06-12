@@ -3,5 +3,9 @@
 
   <%= render "form", task: @task %>
 
-  <%= link_to "Back to tasks", tasks_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <% if params[:return_project_id].present? %>
+    <%= link_to "Back to project", project_path(params[:return_project_id]), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <% else %>
+    <%= link_to "Back to tasks", tasks_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <% end %>
 </div>

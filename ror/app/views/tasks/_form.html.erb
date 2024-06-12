@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="my-5">
+    <%= form.label :star %>
+    <%= form.check_box :star, class: "block mt-2 h-5 w-5" %>
+    <%= form.label :project_id %>
+    <%= form.select :project_id, options_for_select(@projects, selected: task.project_id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :name %>
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
@@ -24,11 +31,10 @@
   <div class="my-5">
     <%= form.label :status %>
     <%= form.select :status, Task.statuses.keys, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :star %>
-    <%= form.check_box :star, class: "block mt-2 h-5 w-5" %>
+    <%= form.label :energy %>
+    <%= form.select :energy, Task.energies.keys, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :time %>
+    <%= form.select :time, Task::times.map { |key, value| [display_time(value), key] } %>
   </div>
 
   <div class="my-5">
@@ -42,25 +48,11 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :energy %>
-    <%= form.select :energy, Task.energies.keys, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :time %>
-    <%= form.select :time, Task::times.map { |key, value| [display_time(value), value] } %>
-  </div>
-
-  <div class="my-5">
     <%= form.label :area_id %>
     <%= form.select :area_id, options_for_select(@areas, selected: task.area_id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-
-  <div class="my-5">
-    <%= form.label :project_id %>
-    <%= form.select :project_id, options_for_select(@projects, selected: task.project_id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <%= hidden_field_tag :return_project_id, params[:return_project_id] %>
 
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
