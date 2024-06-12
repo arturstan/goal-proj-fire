@@ -43,7 +43,11 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
+        if params[:return_project_id].present?
+          format.html { redirect_to project_path(params[:return_project_id]), notice: "Task was successfully created." }
+        else
+          format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
+        end
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -56,7 +60,12 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
+        if params[:return_project_id].present?
+          format.html { redirect_to project_path(params[:return_project_id]), notice: "Task was successfully updated." }
+          #format.html { redirect_to area_path(params[:return_area_id]), notice: "Goal was successfully updated." }
+        else
+          format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
+        end
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit, status: :unprocessable_entity }

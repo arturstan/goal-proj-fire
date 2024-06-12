@@ -83,7 +83,7 @@
     </div>
   <% end %>
   <p>
-    <%= link_to "Add task", new_task_path(project_id: @project.id, area_id: @project.area_id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
+    <%= link_to "Add task", new_task_path(project_id: @project.id, area_id: @project.area_id, return_project_id: @project.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
   </p>
 
 </div>
