@@ -84,6 +84,57 @@ class TasksController < ApplicationController
     end
   end
 
+  def up
+    id = params[:id]
+    h_old = params[:hierarchy].to_i
+    if h_old == 1
+      return
+    end
+    Task.where(user_id: current_user.id)
+           .where(id: id)
+           .update(hierarchy: h_old - 1)
+
+    Task.where(user_id: current_user.id)
+           .where(hierarchy: h_old - 1)
+           .where.not(id: id)
+           .update(hierarchy: h_old)
+
+    respond_to do |format|
+      if params[:return_project_id].present?
+        project_path(params[:return_project_id])
+      else
+        format.html { redirect_to tasks_url }
+      end
+      format.json { render tasks_url, status: :ok }
+    end
+  end
+
+  def down
+    id = params[:id]
+    h_old = params[:hierarchy].to_i
+    max_hierarchy = Task.where(user_id: current_user.id).maximum(:hierarchy)
+    if h_old == max_hierarchy
+      return
+    end
+    Task.where(user_id: current_user.id)
+           .where(id: id)
+           .update(hierarchy: h_old + 1)
+
+    Task.where(user_id: current_user.id)
+           .where(hierarchy: h_old + 1)
+           .where.not(id: id)
+           .update(hierarchy: h_old)
+
+    respond_to do |format|
+      if params[:return_project_id].present?
+        project_path(params[:return_project_id])
+      else
+        format.html { redirect_to tasks_url }
+      end
+      format.json { render tasks_url, status: :ok }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
