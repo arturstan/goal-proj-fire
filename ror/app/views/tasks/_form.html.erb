@@ -52,6 +52,11 @@
     <%= form.select :area_id, options_for_select(@areas, selected: task.area_id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
+  <p>
+    <%= form.label :Tags %><br />
+    <%= form.collection_check_boxes :tag_ids, @tags, :id, :name %>
+  </p>
+
   <%= hidden_field_tag :return_project_id, params[:return_project_id] %>
 
   <div class="inline">

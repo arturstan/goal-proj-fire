@@ -28,5 +28,8 @@ Rails.application.routes.draw do
   post "projects/:id/up" => "projects#up"
   post "projects/:id/down" => "projects#down"
 
+  post "tasks/:id/up" => "tasks#up"
+  post "tasks/:id/down" => "tasks#down"
+
   root to: "home#index"
 end

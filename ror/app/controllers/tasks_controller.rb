@@ -2,6 +2,8 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
   before_action :set_areas, only: %i[ new edit create update ]
   before_action :set_projects, only: %i[ new edit create update ]
+  before_action :set_tags, only: %i[ new edit create update ]
+  before_action :authenticate_user!
 
   # GET /tasks or /tasks.json
   def index
@@ -43,6 +45,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
+        handle_tags_task
         if params[:return_project_id].present?
           format.html { redirect_to project_path(params[:return_project_id]), notice: "Task was successfully created." }
         else
@@ -60,6 +63,7 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
+        handle_tags_task
         if params[:return_project_id].present?
           format.html { redirect_to project_path(params[:return_project_id]), notice: "Task was successfully updated." }
           #format.html { redirect_to area_path(params[:return_area_id]), notice: "Goal was successfully updated." }
@@ -153,8 +157,20 @@ class TasksController < ApplicationController
           .map { |proj| [proj.name, proj.id] }
   end
 
+  def set_tags
+    @tags = Tag.where(user_id: current_user.id).order(name: :asc)
+  end
+
+  def handle_tags_task
+    if params[:tag_ids]
+      @project.tags.clear
+      tags = params[:tag_ids].map { |id| Tags.find(id) }
+      @project.tags << tags
+    end
+  end
+
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:name, :description, :status, :star, :start_date, :due_date, :energy, :time, :user_id, :area_id, :project_id)
+      params.require(:task).permit(:name, :description, :status, :star, :start_date, :due_date, :energy, :time, :user_id, :area_id, :project_id, tag_ids: [])
     end
 end

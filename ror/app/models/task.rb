@@ -9,6 +9,8 @@ class Task < ApplicationRecord
   validates :name, uniqueness: { scope: :project_id, message: "You already have a task with this name and project" }
   validate :start_date_after_now
   validate :due_date_after_start_date
+  has_and_belongs_to_many :tags
+
   private
 
   def start_date_after_now

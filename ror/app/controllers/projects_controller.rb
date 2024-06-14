@@ -133,14 +133,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def handle_tags_project
-    if params[:tag_ids]
-      @project.tags.clear
-      tags = params[:tag_ids].map { |id| Tags.find(id) }
-      @project.tags << tags
-    end
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
@@ -180,6 +172,15 @@ class ProjectsController < ApplicationController
       [['star', true]] +
       [['no star', false]]
   end
+
+  def handle_tags_project
+    if params[:tag_ids]
+      @project.tags.clear
+      tags = params[:tag_ids].map { |id| Tags.find(id) }
+      @project.tags << tags
+    end
+  end
+
     # Only allow a list of trusted parameters through.
     def project_params
       params.require(:project).permit(:area_id, :goal_id, :name, :description, :hierarchy, :status, :start_date, :due_date, :star, tag_ids: [])
