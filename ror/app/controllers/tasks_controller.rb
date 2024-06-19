@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_task, only: %i[ show edit update destroy up down ]
   before_action :set_areas, only: %i[ new edit create update ]
   before_action :set_projects, only: %i[ new edit create update ]
   before_action :set_tags, only: %i[ new edit create update ]
@@ -41,7 +41,8 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.user_id = current_user.id
-    @task.hierarchy = Task.where(user_id: current_user.id).maximum(:hierarchy).to_i + 1
+    @task.hierarchy = Task.where(project_id:  @task.project_id)
+                          .maximum(:hierarchy).to_i + 1
 
     respond_to do |format|
       if @task.save
@@ -94,11 +95,11 @@ class TasksController < ApplicationController
     if h_old == 1
       return
     end
-    Task.where(user_id: current_user.id)
+    Task.where(project_id: @task.project_id)
            .where(id: id)
            .update(hierarchy: h_old - 1)
 
-    Task.where(user_id: current_user.id)
+    Task.where(project_id: @task.project_id)
            .where(hierarchy: h_old - 1)
            .where.not(id: id)
            .update(hierarchy: h_old)
@@ -120,11 +121,11 @@ class TasksController < ApplicationController
     if h_old == max_hierarchy
       return
     end
-    Task.where(user_id: current_user.id)
+    Task.where(project_id: @task.project_id)
            .where(id: id)
            .update(hierarchy: h_old + 1)
 
-    Task.where(user_id: current_user.id)
+    Task.where(project_id: @task.project_id)
            .where(hierarchy: h_old + 1)
            .where.not(id: id)
            .update(hierarchy: h_old)
