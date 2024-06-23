@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :task_comments
   resources :tasks
   resources :project_comments
   resources :goal_comments
