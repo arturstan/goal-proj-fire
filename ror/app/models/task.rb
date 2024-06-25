@@ -10,6 +10,7 @@ class Task < ApplicationRecord
   validate :start_date_after_now
   validate :due_date_after_start_date
   has_and_belongs_to_many :tags
+  has_many :task_comments
 
   private
 

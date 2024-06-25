@@ -1,0 +1,12 @@
+<div id="<%= dom_id task_comment %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comment:</strong>
+    <%= task_comment.comment %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this task comment", task_comment, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this task comment", edit_task_comment_path(task_comment), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
