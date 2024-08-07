@@ -60,7 +60,7 @@
             <th><%= project.star %></th>
             <th class="text-left px-2"><%= project.status %></th>
             <th class="text-left px-2">
-              <%= link_to project.name, project_path(project), style: "text-decoration-line: underline;"  %>
+              <%= link_to project.name, project_path(project, return_goal_id: @goal.id), style: "text-decoration-line: underline;"  %>
             </th>
             <th class="text-left px-2"><%= project.description.slice(0, 20) %></th>
             <th class="text-left px-2"><%= project.goal.name if project.goal %></th>
