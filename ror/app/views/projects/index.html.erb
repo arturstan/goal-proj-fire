@@ -28,7 +28,7 @@ Search by:<br>
         <th class="text-left px-2">
           <%= link_to project.name, project_path(project), style: "text-decoration-line: underline;"  %>
         </th>
-        <th class="text-left px-2"><%= project.description.slice(0, 20) %></th>
+        <th class="text-left px-2" title="<%= project.description %>"> <%= project.description.slice(0, 20) %></th>
         <th class="text-left px-2"><%= link_to project.goal.name, goal_path(project.goal), style: "text-decoration-line: underline;" if project.goal %></th>
         <th class="text-left px-2"><%= link_to project.area.name, area_path(project.area), style: "text-decoration-line: underline;" if project.area %></th>
         <th class="flex items-center space-x-2">
