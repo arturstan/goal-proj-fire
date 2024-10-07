@@ -9,6 +9,7 @@ Search by:<br>
 
 <h1 class="text-2xl font-bold justify-center" style="display: flex; justify-content: center;">Projects</h1>
 
+<% next_id = 0 %>
 <% max_hierarchy = @projects.maximum(:hierarchy) %>
 <div id="projects" class="justify-center" style="display: flex; justify-content: center;">
   <table class="w-full border-collapse border border-blue-500 max-w-xl mt-16 mx-auto">
@@ -21,6 +22,12 @@ Search by:<br>
       <th class="py-2 px-4 text-left">Area</th>
       <th class="py-2 px-4 text-left"></th>
     </tr>
+    <% project_previous_id = {} %>
+    <% previous_id = 0 %>
+    <% @projects.reverse_each do |project| %>
+      <% project_previous_id[project] = previous_id %>
+      <% previous_id = project.id %>
+    <% end %>
   <% @projects.each do |project| %>
       <tr class="bg-white border-b border-blue-500">
         <th class="text-left px-2"><%= project.star ? "Yes" : "" %></th>
@@ -33,14 +40,15 @@ Search by:<br>
         <th class="text-left px-2"><%= link_to project.area.name, area_path(project.area), style: "text-decoration-line: underline;" if project.area %></th>
         <th class="flex items-center space-x-2">
           <%= link_to "Edit", edit_project_path(project), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
-          <% if project.hierarchy > 1 %>
-            <%= button_to "Up", { action: 'up', id: project.id, hierarchy: project.hierarchy, method: :post }, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
+          <% if next_id > 0 %>
+            <%= button_to "Up", { action: 'exchange_hierarchy', id: project.id, hierarchy: project.hierarchy, project_exchange_id: next_id , method: :post }, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
           <% end %>
           <% if project.hierarchy < max_hierarchy %>
-            <%= button_to "Down", { action: 'down', id: project.id, hierarchy: project.hierarchy, method: :post}, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
+            <%= button_to "Down", { action: 'exchange_hierarchy', id: project.id, hierarchy: project.hierarchy, project_exchange_id: project_previous_id[project], method: :post}, class: 'inline-flex items-center px-2 py-1 border border-transparent text-xs font-small rounded-md bg-gray-200' %>
           <% end %>
         </th>
       </tr>
+      <%  next_id = project.id %>
   <% end %>
     </table>
 </div>

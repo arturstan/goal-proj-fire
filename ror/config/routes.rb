@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   post "projects/:id/up" => "projects#up"
   post "projects/:id/down" => "projects#down"
+  post "projects/:id/exchange_hierarchy" => "projects#exchange_hierarchy"
 
   post "tasks/:id/up" => "tasks#up"
   post "tasks/:id/down" => "tasks#down"

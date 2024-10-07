@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
     @projects = Project.where(user_id: current_user.id)
     @projects = @projects.where(status: params[:status]) if params[:status].present?
     @projects = @projects.where(star: params[:star]) if params[:star].present?
-    @projects.order(:hierarchy)
+    @projects = @projects.order(:hierarchy)
 
     @status = params[:status] if params[:status].present?
     @star = params[:star] if params[:star].present?
@@ -133,6 +133,32 @@ class ProjectsController < ApplicationController
       format.json { render projects_url, status: :ok }
     end
   end
+
+  def exchange_hierarchy
+    id = params[:id]
+    project_exchange_id = params[:project_exchange_id]
+    h_old = params[:hierarchy].to_i
+    if h_old == 1
+      return
+    end
+
+    project2 = Project.find_by(user_id: current_user.id, id: project_exchange_id)
+    if project2 == nil
+      return
+    end
+    Project.where(user_id: current_user.id)
+           .where(id: id)
+           .update(hierarchy: project2.hierarchy)
+
+    Project.where(id: project_exchange_id)
+           .update(hierarchy: h_old)
+
+    respond_to do |format|
+      format.html { redirect_to projects_url }
+      format.json { render projects_url, status: :ok }
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
