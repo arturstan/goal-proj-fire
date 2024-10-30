@@ -67,7 +67,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def check_email
-    allowed_emails = %w[arturstan@gmail.com arturstan2@gmail.com]
+    allowed_emails = ENV['ALLOWED_EMAILS']&.split(',')
     unless allowed_emails.include?(sign_up_params[:email])
       flash[:alert] = "The email address is not registered to create an account."
       redirect_to new_user_registration_path
