@@ -106,6 +106,9 @@
 
     </div>
   <% else %>
+w    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "flash #{name}") %>
+    <% end %>
     <%= yield %>
   <% end %>
   </body>
