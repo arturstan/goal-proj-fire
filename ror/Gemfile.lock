@@ -169,6 +169,7 @@ GEM
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.5.9)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -243,12 +244,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.7.2-aarch64-linux)
-    sqlite3 (1.7.2-arm-linux)
-    sqlite3 (1.7.2-arm64-darwin)
-    sqlite3 (1.7.2-x86-linux)
-    sqlite3 (1.7.2-x86_64-darwin)
-    sqlite3 (1.7.2-x86_64-linux)
     stimulus-rails (1.3.3)
       railties (>= 6.0.0)
     stringio (3.1.0)
@@ -305,12 +300,12 @@ DEPENDENCIES
   dotenv-rails
   importmap-rails
   jbuilder
+  pg
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.2)
   rails_live_reload
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   tailwindcss-rails (~> 2.3)
   turbo-rails
