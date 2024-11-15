@@ -1,0 +1,1 @@
+web: cd ror && bundle exec puma -C config/puma.rb
