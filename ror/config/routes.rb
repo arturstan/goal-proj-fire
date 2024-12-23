@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :tags
   resources :areas
   devise_for :users, controllers: {
-    registrations: 'users/registrations'
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    #passwords: 'users/passwords'
   }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
