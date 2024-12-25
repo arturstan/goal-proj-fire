@@ -28,6 +28,8 @@ class ProjectsController < ApplicationController
     @project = Project.new
     if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
       @project.area_id = area_default.id
+    else
+      @project.area_id = params[:area_id]
     end
     # @project.tags.build
   end
@@ -45,7 +47,15 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.save
         handle_tags_project
-        format.html { redirect_to projects_url, notice: "Project was successfully created." }
+        if params[:return_area_id].present?
+          format.html { redirect_to area_path(params[:return_area_id]), notice: "Project was successfully updated." }
+        elsif params[:return_goal_id].present?
+          format.html { redirect_to goal_path(params[:return_goal_id]), notice: "Project was successfully updated." }
+        elsif params[:return_project_id].present?
+          format.html { redirect_to project_path(params[:return_project_id]), notice: "Project was successfully updated." }
+        else
+          format.html { redirect_to projects_url, notice: "Project was successfully updated." }
+        end
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new, status: :unprocessable_entity }

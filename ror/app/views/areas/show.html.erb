@@ -13,9 +13,11 @@
 </div>
 <div>
   <h1 class="text-2xl font-bold justify-center py-4" style="display: flex; justify-content: center;">Goals</h1>
+  <%= link_to "Add goal", new_goal_path(area_id: @area.id, return_area_id: @area.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
   <% if @goals.any? %>
+    <!--<button id="toggleTableGoals">Toggle goals</button>-->
   <div id="goals" class="justify-center" style="display: flex; justify-content: center;">
-    <table>
+    <table id="tableGoals">
       <tr>
         <th>Status</th>
         <th>Name</th>
@@ -40,9 +42,11 @@
 
   <div>
     <h1 class="text-2xl font-bold justify-center py-4" style="display: flex; justify-content: center;">Projects</h1>
+    <%= link_to "Add project", new_project_path(area_id: @area.id, return_area_id: @area.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
     <% if @projects.any? %>
+      <!--<button id="toggleTableProjects">Toggle goals</button>-->
     <div id="projects" class="justify-center" style="display: flex; justify-content: center;">
-      <table style="margin-left: auto; margin-right: auto;">
+      <table  id="tableProjects" style="margin-left: auto; margin-right: auto;">
         <tr>
           <th>Star</th>
           <th>Status</th>

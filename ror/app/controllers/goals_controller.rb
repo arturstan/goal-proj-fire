@@ -22,8 +22,10 @@ class GoalsController < ApplicationController
   # GET /goals/new
   def new
     @goal = Goal.new
-    if area_default = Area.where(user_id: current_user.id, isDefault: true).first
+    if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
       @goal.area_id = area_default.id
+    else
+      @goal.area_id = params[:area_id]
     end
   end
 
@@ -39,7 +41,11 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @goal.save
-        format.html { redirect_to goals_url, notice: "Goal was successfully created." }
+        if params[:return_area_id].present?
+          format.html { redirect_to area_path(params[:return_area_id]), notice: "Goal was successfully updated." }
+        else
+          format.html { redirect_to goals_url, notice: "Goal was successfully created." }
+          end
         format.json { render :show, status: :created, location: @goal }
       else
         format.html { render :new, status: :unprocessable_entity }
