@@ -1,25 +1,25 @@
 <div class="max-w-sm mx-auto">
   <h1 class="text-2xl py-3">Log in</h1>
     <div>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "border border-gray-300 rounded-md p-6 shadow-lg bg-white" }) do |f| %>
-    <div class="field">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "border border-red-300 rounded-md p-6 shadow-lg bg-white" }) do |f| %>
+    <div class="field p-4">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
-    <div class="field">
+    <div class="field p-4">
       <%= f.label :password %><br />
       <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
-      <div class="field">
+      <div class="field p-4">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
       </div>
     <% end %>
 
-    <div class="actions">
+    <div class="actions p-4">
       <%= f.submit "Log in", class: "text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" %>
     </div>
   <% end %>
