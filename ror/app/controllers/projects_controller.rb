@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  helper TasksHelper
   before_action :set_project, only: %i[ show edit update destroy ]
   before_action :set_areas, only: %i[ new edit create update ]
   before_action :set_goals, only: %i[ new edit create update ]
