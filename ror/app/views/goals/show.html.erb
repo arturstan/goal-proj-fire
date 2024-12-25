@@ -43,6 +43,7 @@
 
 <div>
   <h1 class="text-2xl font-bold justify-center py-4" style="display: flex; justify-content: center;">Projects</h1>
+  <%= link_to "Add project", new_project_path(goal_id: @goal.id, area_id: @goal.area_id, return_goal_id: @goal.id), class: 'inline-flex items-center px-3 py-1 border border-transparent text-s font-small rounded-md bg-gray-200' %>
   <% if @projects.any? %>
     <div id="projects" class="justify-center" style="display: flex; justify-content: center;">
       <table style="margin-left: auto; margin-right: auto;">

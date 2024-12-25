@@ -31,6 +31,7 @@ class ProjectsController < ApplicationController
     else
       @project.area_id = params[:area_id]
     end
+    @project.goal_id = params[:goal_id]
     # @project.tags.build
   end
 
