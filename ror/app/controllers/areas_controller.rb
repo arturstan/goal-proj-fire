@@ -31,11 +31,6 @@ class AreasController < ApplicationController
 
     respond_to do |format|
       if @area.save
-        if @area.isDefault
-          Area.where(user_id: current_user.id)
-             .where.not(id: @area.id)
-             .update_all(isDefault: false)
-        end
         format.html { redirect_to areas_url, notice: "Area was successfully created." }
         format.json { render :show, status: :created, location: @area }
       else
@@ -49,11 +44,6 @@ class AreasController < ApplicationController
   def update
     respond_to do |format|
       if @area.update(area_params)
-        if @area.isDefault
-           Area.where(user_id: current_user.id)
-                .where.not(id: @area.id)
-                .update(isDefault: false)
-        end
         format.html { redirect_to areas_url, notice: "Area was successfully updated." }
         format.json { render :show, status: :ok, location: @area }
       else
@@ -137,6 +127,6 @@ class AreasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def area_params
-      params.require(:area).permit(:name, :hierarchy, :isDefault)
+      params.require(:area).permit(:name, :hierarchy)
     end
 end

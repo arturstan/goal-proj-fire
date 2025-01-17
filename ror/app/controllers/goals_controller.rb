@@ -22,11 +22,7 @@ class GoalsController < ApplicationController
   # GET /goals/new
   def new
     @goal = Goal.new
-    if (area_default = Area.where(user_id: current_user.id, isDefault: true).first)
-      @goal.area_id = area_default.id
-    else
-      @goal.area_id = params[:area_id]
-    end
+    @goal.area_id = params[:area_id]
   end
 
   # GET /goals/1/edit

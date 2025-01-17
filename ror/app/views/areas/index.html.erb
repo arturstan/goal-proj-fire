@@ -5,14 +5,12 @@
 <div id="areas" class="justify-center" style="display: flex; justify-content: center;">
 <table class="w-full border-collapse border border-blue-500 max-w-xl mt-16 mx-auto">
   <tr class="bg-blue-500 text-gray-600">
-    <th class="py-2 px-4 text-left">Default</th>
     <th class="py-2 px-4 text-left">Name</th>
     <th class="py-2 px-4 text-left"></th>
   </tr>
   <tbody>
   <% @areas.each do |area| %>
       <tr class="bg-white border-b border-blue-500">
-        <th class="text-left"><%= area.isDefault ? "Yes" : "" %></th>
         <th class="text-left px-2">
           <%= link_to area.name, area_path(area), style: "text-decoration-line: underline;" %>
         </th>
